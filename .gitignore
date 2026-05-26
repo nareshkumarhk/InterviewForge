@@ -5,3 +5,26 @@ __pycache__/
 .venv/
 venv/
 .env
+
+# Environment files
+*.env
+*.env.*
+!.env.example
+
+# Editor/OS artifacts
+.idea/
+.vscode/
+
+# Python build/test artifacts
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Evaluation outputs (generated)
+phase0/interview-review-agent/tests/results/partial/
+phase0/interview-review-agent/tests/results/v*/
+!phase0/interview-review-agent/tests/results/v*/
+phase0/interview-review-agent/tests/results/v*/*
+!phase0/interview-review-agent/tests/results/v*/.gitkeep
