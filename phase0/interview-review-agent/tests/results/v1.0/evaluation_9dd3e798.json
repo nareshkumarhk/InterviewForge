@@ -1,0 +1,285 @@
+{
+  "evaluation_id": "9dd3e798",
+  "prompt_versions": {
+    "evidence_extraction": "v1.0",
+    "dimension_scoring": "v1.0",
+    "output_naresh": "v1.0",
+    "output_quick": "v1.0"
+  },
+  "transcript_file": "tests/transcripts/transcript_1.txt",
+  "role": {
+    "role_title": "Senior Backend Developer",
+    "role_level": "senior",
+    "experience_years": "6-10",
+    "must_have_skills": [
+      {
+        "skill": "Python",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Production-scale async processing and Django-based API development"
+      },
+      {
+        "skill": "System Design",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and own distributed systems end-to-end"
+      },
+      {
+        "skill": "Databases",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Query optimization, schema design, ORM usage"
+      }
+    ],
+    "nice_to_have": [
+      "Kafka",
+      "Redis",
+      "AWS",
+      "Kubernetes"
+    ],
+    "key_responsibilities": [
+      "Design backend services and APIs",
+      "Lead technical architecture decisions",
+      "Mentor junior and mid-level engineers",
+      "Own production systems and incident response"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Bilal",
+    "duration_minutes": 50,
+    "date": "2025-05-15"
+  },
+  "evidence": {
+    "technical_statements": [
+      {
+        "topic": "HashMap internals",
+        "quote": "HashMap uses hashing to store key-value pairs. It calls the hashCode() method on the key to determine which bucket to place the entry in. When there's a collision - when two keys hash to the same bucket - it uses chaining, which is a linked list of entries in that bucket. In Java 8 and later, if a bucket accumulates more than 8 entries, it converts the linked list to a red-black tree for better lookup performance.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained fundamentals clearly with version-specific details"
+      },
+      {
+        "topic": "HashMap resizing",
+        "quote": "When the number of entries exceeds the load factor times capacity - the default load factor is 0.75 - it doubles the capacity and rehashes all existing entries into the new buckets. This is an O(n) operation.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Accurately described resizing mechanism and complexity"
+      },
+      {
+        "topic": "Microservices design",
+        "quote": "We use microservices at my company. Each service is responsible for a different domain of the business logic. We have maybe 15-20 services in total.",
+        "depth": "superficial",
+        "evidence_type": "neutral",
+        "context": "Described the setup but lacked personal contribution or deeper insights"
+      },
+      {
+        "topic": "Kafka usage",
+        "quote": "We use Kafka for messaging between most services. Some services use REST APIs for synchronous calls.",
+        "depth": "superficial",
+        "evidence_type": "neutral",
+        "context": "Mentioned usage but did not explain personal involvement or deeper understanding"
+      },
+      {
+        "topic": "Kafka message ordering",
+        "quote": "Kafka partitions messages. Ordering is guaranteed within a partition.",
+        "depth": "superficial",
+        "evidence_type": "neutral",
+        "context": "Basic understanding of Kafka's partitioning and ordering"
+      },
+      {
+        "topic": "Kafka consumer failure",
+        "quote": "If a consumer fails... I think the messages are retried but I'm not exactly sure of the specifics of how that works.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "context": "Uncertainty about Kafka's handling of consumer failures"
+      },
+      {
+        "topic": "ORM optimization",
+        "quote": "I investigated and found that the ORM was generating N+1 queries. I fixed it by adding select_related and prefetch_related calls to the queryset.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Identified and resolved a performance issue with specific ORM optimizations"
+      },
+      {
+        "topic": "Sliding window algorithm",
+        "quote": "A better approach is to use a sliding window with a hash set. I'll maintain a window with two pointers - left and right. I expand right, and if I encounter a duplicate character, I move left forward until the duplicate is gone. At each step I track the maximum window size.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained the sliding window technique clearly with implementation details"
+      },
+      {
+        "topic": "Cloud infrastructure",
+        "quote": "We use AWS at my company. We have EC2 instances, RDS for databases, and S3 for file storage. We also use ECS for container orchestration.",
+        "depth": "superficial",
+        "evidence_type": "neutral",
+        "context": "Described AWS usage but no personal involvement in setup or management"
+      }
+    ],
+    "ownership_signals": [
+      {
+        "type": "ownership",
+        "quote": "I investigated and found that the ORM was generating N+1 queries.",
+        "context": "Took initiative to identify and resolve a performance issue"
+      },
+      {
+        "type": "exposure",
+        "quote": "We use microservices at my company.",
+        "context": "Described company setup without personal contribution details"
+      },
+      {
+        "type": "exposure",
+        "quote": "The team decided to use Kafka before I joined the company.",
+        "context": "No personal involvement in the decision to use Kafka"
+      },
+      {
+        "type": "exposure",
+        "quote": "Not really, our DevOps team handles the infrastructure.",
+        "context": "No personal involvement in cloud infrastructure management"
+      }
+    ],
+    "problem_solving_approach": {
+      "clarifies_requirements": true,
+      "systematic_debugging": true,
+      "handles_edge_cases": true,
+      "notes": "Asked clarifying questions before coding. Identified and resolved ORM performance issue independently. Handled edge cases in coding problem effectively."
+    },
+    "buzzwords_flagged": [
+      "microservices",
+      "scalable",
+      "cloud-native"
+    ]
+  },
+  "scores": [
+    {
+      "name": "Fundamentals",
+      "score": 4.0,
+      "reasoning": "The candidate demonstrated a strong understanding of HashMap internals and resizing mechanisms, providing detailed explanations with version-specific details. However, there was a lack of depth in understanding Kafka consumer failure handling.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "HashMap uses hashing to store key-value pairs...",
+          "topic": "HashMap internals"
+        },
+        {
+          "type": "strength",
+          "quote": "When the number of entries exceeds the load factor...",
+          "topic": "HashMap resizing"
+        },
+        {
+          "type": "weakness",
+          "quote": "If a consumer fails... I think the messages are retried...",
+          "topic": "Kafka consumer failure"
+        }
+      ]
+    },
+    {
+      "name": "Coding",
+      "score": 4.5,
+      "reasoning": "The candidate effectively used the sliding window technique and handled edge cases well. They demonstrated systematic debugging and a clear problem-solving approach.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "A better approach is to use a sliding window with a hash set...",
+          "topic": "Sliding window algorithm"
+        },
+        {
+          "type": "strength",
+          "quote": "Identified and resolved ORM performance issue independently.",
+          "topic": "Problem solving approach"
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "score": 2.5,
+      "reasoning": "The candidate mentioned using microservices and Kafka but did not provide insights into their personal contributions or deeper architectural understanding. Buzzwords were used without depth.",
+      "evidence": [
+        {
+          "type": "neutral",
+          "quote": "We use microservices at my company...",
+          "topic": "Microservices design"
+        },
+        {
+          "type": "neutral",
+          "quote": "We use Kafka for messaging between most services...",
+          "topic": "Kafka usage"
+        }
+      ]
+    },
+    {
+      "name": "Ownership",
+      "score": 3.0,
+      "reasoning": "The candidate showed feature-level ownership by identifying and resolving a performance issue with ORM. However, there was no evidence of system-level or org-level ownership.",
+      "evidence": [
+        {
+          "type": "ownership",
+          "quote": "I investigated and found that the ORM was generating N+1 queries.",
+          "context": "Took initiative to identify and resolve a performance issue"
+        },
+        {
+          "type": "exposure",
+          "quote": "The team decided to use Kafka before I joined the company.",
+          "context": "No personal involvement in the decision to use Kafka"
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "score": 3.5,
+      "reasoning": "The candidate communicated technical concepts clearly and structured their responses well. However, there was room for improvement in explaining complex topics like Kafka consumer failure.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "Explained the sliding window technique clearly with implementation details.",
+          "topic": "Sliding window algorithm"
+        },
+        {
+          "type": "weakness",
+          "quote": "If a consumer fails... I think the messages are retried...",
+          "topic": "Kafka consumer failure"
+        }
+      ]
+    },
+    {
+      "name": "Practical",
+      "score": 3.0,
+      "reasoning": "The candidate demonstrated practical experience with ORM optimization and problem-solving but lacked involvement in cloud infrastructure and system design.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "I investigated and found that the ORM was generating N+1 queries...",
+          "topic": "ORM optimization"
+        },
+        {
+          "type": "exposure",
+          "quote": "Not really, our DevOps team handles the infrastructure.",
+          "context": "No personal involvement in cloud infrastructure management"
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "score": 3.0,
+      "reasoning": "The candidate showed steady growth by learning and applying ORM optimizations. However, there was no evidence of active learning beyond immediate needs or exploring new technologies.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "I investigated and found that the ORM was generating N+1 queries...",
+          "topic": "ORM optimization"
+        }
+      ]
+    }
+  ],
+  "interviewer_analysis": null,
+  "decision": {
+    "recommendation": "Reject",
+    "reasoning": "Score 3.40 below threshold 4.0",
+    "weighted_score": 3.4,
+    "threshold": 4.0
+  },
+  "feedback_naresh": "# Senior Backend Developer Interview - L1_Technical\n\n**Status:** Reject\n\n## Remarks\n\nCandidate has 7 years of experience, currently a Backend Developer with exposure to microservices and Kafka.\n\n- Fundamentals: 4.0/5 - Strong understanding of HashMap internals and resizing (\"HashMap uses hashing to store key-value pairs...\"). Lacked depth in Kafka consumer failure handling (\"If a consumer fails... I think the messages are retried...\").\n- Coding: 4.5/5 - Effective use of sliding window technique and handled edge cases well (\"A better approach is to use a sliding window with a hash set...\").\n- Architecture: 2.5/5 - Mentioned microservices and Kafka but lacked personal contribution or deeper understanding (\"We use microservices at my company...\").\n- Ownership: 3.0/5 - Showed feature-level ownership with ORM optimization (\"I investigated and found that the ORM was generating N+1 queries.\") but no system-level ownership.\n- Practical: 3.0/5 - Demonstrated ORM optimization but no involvement in cloud infrastructure or system design (\"Not really, our DevOps team handles the infrastructure.\").\n\nMain concern: Architecture knowledge is superficial, with buzzwords used without depth. For a senior role, we require someone who can lead technical architecture decisions and own distributed systems end-to-end.\n\nCalibration: Candidate is at an intermediate level, not senior. While coding skills are strong, the lack of architectural depth and ownership at the system level is a significant gap for this role.\n\n## Interview Reliability Note\n\n**Reliability:** High\n\nInterviewer covered fundamentals, coding, and architecture thoroughly in 50 minutes. Candidate had multiple opportunities to demonstrate depth and ownership.\n\n## Overall Take\n\nCandidate has strong coding skills and a good grasp of fundamentals but lacks the architectural depth and system-level ownership required for a senior position. The role demands expertise in system design and the ability to lead technical decisions, which were not evident.\n\n## One-Line Summary\n\nStrong coder with fundamentals, but lacks architectural depth and ownership for senior level.",
+  "feedback_quick": "# Quick Interview Summary\n\n**Role:** Senior Backend Developer (Senior)  \n**Recommendation:** Reject  \n**Score:** 3.4/5.0\n\n## Quick Take\nThe candidate demonstrated strong coding skills and a solid understanding of HashMap internals, but lacked depth in system design and architecture, which are critical for this senior role. The inability to articulate personal contributions to architectural decisions and limited exposure to cloud infrastructure are significant concerns.\n\n## Key Points\n- \u2713 Strong coding skills (4.5/5): Effectively used sliding window technique and handled edge cases well\n- \u2713 Solid understanding of HashMap internals (4.0/5): Provided detailed explanations on resizing mechanisms\n- \u2717 Lack of architectural depth (2.5/5): Used buzzwords like microservices without demonstrating personal contributions\n- \u2717 Limited system-level ownership (3.0/5): No evidence of involvement in system design or cloud infrastructure\n\n## Next Steps\nDo not proceed. The candidate's skills do not meet the critical requirements for a senior-level backend developer, particularly in system design and architecture.",
+  "processing_time_seconds": 28.35,
+  "timestamp": "2026-05-16T17:09:54.696647"
+}

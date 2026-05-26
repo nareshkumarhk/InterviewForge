@@ -1,0 +1,1693 @@
+L1 Interview  Gautam Raosaheb Chaudhari  Tech Lead- .Net  Dbiz.ai-20260515_110009-Meeting Recording
+May 15, 2026, 5:30AM
+1h 4m 42s
+
+Neha Thomas started transcription
+
+Jayantha Liyanage   0:03
+Start with the UI experience, like where you have worked on, which projects, and which roles you have played, the technology stacks, and all.
+
+Gautam Chaudhari   0:09
+Yeah.
+So, my name is Gautam, andf I have an overall tool of experience in.NET development, and I'm mostly working back in development. I work in three companies, out of the sourcing, which is Action, and Inpora. The Inpora was my last company, where I worked there almost five years in.
+technology. So it was a mobile application for healthcare domain and I was in backend team as a senior backend.NET developer who was responsible for developing the API deployment, performance of the application and using the cloud services.
+and with some client interaction. So I have over 20 years experience in development, so C# is the mostly I use language and last five years I'm working on .NET Core, C#, MSSQL.
+And for deployment purpose, I use the Azure C pipeline, and the server was Azure app service, and for logging mechanism, I use the application insights.
+
+Jayantha Liyanage   1:27
+Okay, good. So, what are the solid principles? How do you use them in your projects?
+
+Gautam Chaudhari   1:36
+So, for in principle, so if we take one of the first one is a single responsibility means that your service class should have a little responsibility. So, we should not add many other features in single service to make it complicated, and your service class should be shortest.
+It will be easy to handle that class. The another one is the open-close principle. That means whenever you write your method, you write in such a way that, or you get your service plus in such a way that you don't need.
+To modify that method again and again, instead that you should add the new feature or new change, we should implement new change and extend that class suppose interface and you in that interface you define your contracts and that interface.
+Can going to be implemented by classes according to the features, I just...
+
+Jayantha Liyanage   2:40
+So why why open close principle is they are basically what is the reason that the open for extension closed for modification? What's the reason behind it?
+
+Gautam Chaudhari   2:52
+So, currently, you have a notification system and notification feature, and currently you have two notifications, right? So, you create a feature if the client wants new notification file, then instead of writing if else condition.
+
+Jayantha Liyanage   3:01
+Mhm.
+Mm.
+
+Gautam Chaudhari   3:12
+And modifying the existing code, so you create a separate clause for each notification, and there should be one parent interface, so it was going to be implemented by that and will be here in the future, so we are not going to modify the changes, so there are no chances to.
+
+Jayantha Liyanage   3:29
+M.
+
+Gautam Chaudhari   3:32
+See the existing product that will be safe from changing. You just plug and play a new feature.
+
+Jayantha Liyanage   3:34
+Mhm.
+Mhm.
+Mhm.
+Okay.
+Fine. Seems like your video has a problem. I think you can turn it off.
+OK, right, so just carry on the other properties of the solid principle.
+
+Gautam Chaudhari   4:00
+Sorry, do you want me to stop my video clip or?
+
+Jayantha Liyanage   4:03
+Yeah, just try to stop the your video for now.
+
+Gautam Chaudhari   4:09
+Okay.
+
+Jayantha Liyanage   4:15
+Okay, so what are the other properties of the solid principles we talk about too?
+
+Gautam Chaudhari   4:16
+Okay.
+Okay, so another third one is the list code. It means that whenever you create your parent class and your type classes are implementing or inherited that parent class. So whenever
+
+Jayantha Liyanage   4:25
+Mhm, mhm.
+Right.
+Mhm.
+
+Gautam Chaudhari   4:40
+we try to change the child class with the parent class, they should not break their behavior, means. So the parent class defines some contract, right, means defines some rules. So cat class not break, means it should be workable whenever you run time.
+
+Jayantha Liyanage   4:42
+M.
+Mm-hmm.
+Okay.
+Mhm.
+Mhm.
+Mmh.
+
+Gautam Chaudhari   4:59
+Change your service, then that service child service class will work. It will not, you should not throw the any exception.
+
+Jayantha Liyanage   5:00
+M.
+Mhm.
+Mhm.
+Muhammed.
+
+Gautam Chaudhari   5:10
+Only I so 4th one is interface segregation.
+
+Jayantha Liyanage   5:15
+Mhm.
+
+Gautam Chaudhari   5:16
+It means it says that your interface should not be packed, means it should have at least one or two, three contracts defined because there are some classes who are going to implement that interface that they have to forcefully unnecessary implement that interface methods.
+
+Jayantha Liyanage   5:26
+Mm-hmm.
+
+Gautam Chaudhari   5:35
+So your interface should be less fat and the last one is
+
+Jayantha Liyanage   5:36
+Mm-hmm.
+Mhm.
+What is the?
+
+Gautam Chaudhari   5:50
+difference injection.
+
+Jayantha Liyanage   5:51
+Mhm, understand.
+
+Gautam Chaudhari   5:55
+Yeah, so dependency is that your whenever you use the another service in your class, you should not create their instances, and that means it should not be tightly coupled with your child classes, it should be decoupled, and the instance should be provided through the.
+
+Jayantha Liyanage   6:03
+Mhm.
+Mhm.
+
+Gautam Chaudhari   6:15
+another service or another mechanism they can provide at the runtime, you will get the instance of that card. So that in future, if you want to change that service class, you just, you can replace.
+
+Jayantha Liyanage   6:15
+Neha.
+Mhm.
+Mhm.
+Mmh.
+Yes.
+
+Gautam Chaudhari   6:33
+Or, in the future, would they make use of different intuition?
+
+Jayantha Liyanage   6:35
+Mhm.
+In.NET Core, what are the dependency injection types where you can inject dependencies? Also, what are the ways, basically, what different type of registrations are there in terms of the lifecycle?
+
+Gautam Chaudhari   6:58
+OK, so majorly, there are three lifetime.NET provides for us, so one is single term. Single term means that whenever we register our services, that will be available for the application, hence whenever we start the application, it will be available till the application ends.
+
+Jayantha Liyanage   7:00
+Mhm.
+Hmm.
+M.
+Yeah.
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   7:20
+So, all the application classes can share this service, so in this simple, so simple teams when we when we use that, so as we know that it's creating when we create the object.
+
+Jayantha Liyanage   7:26
+Mhm.
+Mm-hmm.
+Mhm.
+
+Gautam Chaudhari   7:40
+It's not.
+This is not complex or for any means it can be really lightweight process and and suppose some of this we can share that it will not affect the performance of the application kind of support utility functions or kind of configuration services that kind of services we can share.
+
+Jayantha Liyanage   7:50
+Mhm.
+Mm-hmm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   8:05
+through the application using this single term.
+
+Jayantha Liyanage   8:08
+Mhm.
+
+Gautam Chaudhari   8:09
+The another one is scope. Scope means every request it will provides the single instance for that.
+
+Jayantha Liyanage   8:11
+M.
+M.
+Mhm.
+
+Gautam Chaudhari   8:18
+single request. So it will be shared in that same request. So it will not create the new stuff every time the request required. So when we use this scope is when we have support kind of database operation. So this kind of.
+
+Jayantha Liyanage   8:26
+Mhm mhm.
+Mmh.
+
+Gautam Chaudhari   8:38
+With the operation, we need scope.
+
+Jayantha Liyanage   8:41
+Mhm.
+
+Gautam Chaudhari   8:41
+A kind of lifetime, because database is tracking our changes, so they will get the old tracking changes.
+
+Jayantha Liyanage   8:49
+Mhm.
+Mm-hmm.
+
+Gautam Chaudhari   8:54
+We use this scope lifetime for the this operation and transient is again, when whenever creating the object is not costly, means you can create the.
+Object means every time it is requested by in application, so dependency injection provides the new instance, so kind of utilities perture method.
+
+Jayantha Liyanage   9:16
+Mm.
+OK, so for the transient, for the transient, can you just give me a use case example?
+
+Gautam Chaudhari   9:23
+Mhm.
+So, suppose any string operation or any string conversion or any so or any math utility call, that means you just use the input and return the input, so any no any state will be shared in that it is just plain operation, yeah.
+
+Jayantha Liyanage   9:33
+Okay.
+Mhm.
+Mhm.
+Mmh.
+Okay, so what are the design patterns you know other than the singleton design pattern?
+
+Gautam Chaudhari   9:57
+So I know a repository pattern. I know
+
+Jayantha Liyanage   10:01
+Mhm.
+
+Gautam Chaudhari   10:04
+Ohh.
+strategy pattern and latestly
+
+Jayantha Liyanage   10:09
+What is the strategy better? What is the strategy?
+
+Gautam Chaudhari   10:11
+That is it.
+Strategy patterns, or...
+
+Jayantha Liyanage   10:14
+Yeah.
+
+Gautam Chaudhari   10:16
+Yeah, so strategy pattern, uh, the first two on this for this, our solid principle that is open to open for extension and closing for modification help to solve this problem, so we create the interface in strategy patterns and add our contracts and...
+
+Jayantha Liyanage   10:29
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   10:37
+and the classes is going to implement that interface. So every time we get new feature or new behaviour, we create the new class and we implement that interface. So
+We can actually this open to a principle through this.
+
+Jayantha Liyanage   10:57
+So, so okay, indirectly you said something, but the thing is, so what is the use case to use this strategy pattern? What kind of things?
+
+Gautam Chaudhari   11:13
+OK, suppose interface and there are three services are implementing that interface. You mean how to decide which?
+
+Jayantha Liyanage   11:22
+No, just forget about the computer science. Tell me in the layman terms something. So for what we can use the strategy plan.
+
+Gautam Chaudhari   11:35
+For what, which situation, right?
+
+Jayantha Liyanage   11:38
+Mm-hmm.
+
+Gautam Chaudhari   11:40
+So.
+
+Jayantha Liyanage   11:41
+Just the use case.
+
+Gautam Chaudhari   11:43
+So support you have three notification type, SMS, email, and support other notification service. And you have to decide it runtime which notification has to send to the user. Then that time, yeah.
+
+Jayantha Liyanage   11:47
+Mhm mhm mhm.
+Mhm, mhm, mhm.
+Mhm.
+OK, which I will be fine, fine, OK, fine. So let's go to the the repository pattern. What is that?
+
+Gautam Chaudhari   12:10
+A repository pattern means that we create a service class. In that service class we have our business logic and that business logic should not. It is saying that it should include the record pitching logic or inserting updating logic.
+
+Jayantha Liyanage   12:18
+Muhammed.
+
+Gautam Chaudhari   12:29
+In the business service problem, they should get through one another service which is repository pattern, so in which we can create another service which has this credit operation, and through that that credit operation directly connect contact to the our database, so it will be isolated.
+
+Jayantha Liyanage   12:29
+You.
+Mhm.
+Yeah.
+Mhm.
+Let's say I...
+
+Gautam Chaudhari   12:48
+Oh.
+
+Jayantha Liyanage   12:49
+Let's say this repository that you use, so I'm having the base repository and the from that I'm inheriting, right? So you are repository class, then in the base repository, so what kind of things can we keep?
+
+Gautam Chaudhari   13:12
+What kind of thing?
+
+Jayantha Liyanage   13:14
+What kind of implementation can you have in the base repository class?
+
+Gautam Chaudhari   13:20
+So, uh...
+We should not get the base repository. We should every service, there should be.
+
+Jayantha Liyanage   13:27
+Mhm.
+Yeah.
+
+Gautam Chaudhari   13:34
+There is a repository classes, so for every service, you have an employee class and employee related operation, you should have employee repository. And if anything that is very common, which is being used by all the controllers or all the services, then can be used in one of the services.
+
+Jayantha Liyanage   13:38
+Mm-hmm.
+B.
+Mhm.
+Mm.
+Mhm.
+Mhm.
+Okay.
+
+Gautam Chaudhari   13:57
+But it is saying that it should not be not that much generally that repository classes. There should be every business class should have different.
+
+Jayantha Liyanage   14:05
+Have you used the generic represented classes?
+
+Gautam Chaudhari   14:09
+I had, I didn't use it. It's that, yeah.
+
+Jayantha Liyanage   14:11
+You haven't.
+Okay, right, right. So let's go back to the singleton design pattern. So at this time, I'm not going to use the.NET Core dependency injection, right? So basically, my application is.NET framework.
+
+Gautam Chaudhari   14:28
+Mhm.
+
+Jayantha Liyanage   14:32
+I don't have any kind of DI and instead, so but still I want to use singleton design pattern for something, right? So let's say I will start implementing a class like public class singleton. So what kind of implementation are you going to have to?
+
+Gautam Chaudhari   14:36
+M.
+M.
+Hmm.
+
+Jayantha Liyanage   14:53
+How to get the Singleton in Singleton support?
+
+Gautam Chaudhari   15:00
+The first thing is to ensure that the clash no no one pays the instance of that class instance of that class, and so I will make sure that through the I will make the constructor private, so no one is going to create the instance of that class.
+
+Jayantha Liyanage   15:08
+How do you make sure that?
+Huh.
+How to access the instance now?
+
+Gautam Chaudhari   15:21
+So I will create one.
+One property, which is one static property, and I will assign the instance.
+
+Jayantha Liyanage   15:28
+Mhm.
+Uh-huh.
+Mhm.
+
+Gautam Chaudhari   15:34
+to that property in the same class and that property will be used by the class name throughout the application by other classes.
+
+Jayantha Liyanage   15:37
+Mhm.
+Mhm.
+Mhm.
+Mhm.
+Okay, so how do you keep that property value in the memory?
+Throughout the the application lifecycle.
+
+Gautam Chaudhari   15:54
+Yes.
+
+Jayantha Liyanage   15:55
+How do you keep it?
+Garbage collector maker may, you know, may do the garbage collection and then the property value will not be there longer.
+
+Gautam Chaudhari   16:00
+So.
+So it will be a static property, right? And garbage collector doesn't collect a static property.
+
+Jayantha Liyanage   16:15
+Oh.
+Oh no, so why not basically the entire instance you declare a static rather than you create object and assign to a static field. What is the difference?
+
+Gautam Chaudhari   16:35
+You mean why should we implement a singleton class, right?
+
+Jayantha Liyanage   16:40
+Finger done, so you can use in two different ways, right?
+
+Gautam Chaudhari   16:41
+Yeah.
+So, the main purpose is that the creating the object.
+
+Jayantha Liyanage   16:52
+Mhm.
+
+Gautam Chaudhari   16:52
+Again and again, it is costly for the applications, right? So, so it is a process, right? Creating every time creating the object. So our tailor has to occupy the new memory in here. So it is a process, right? So instead of that, we create only one instance and that.
+
+Jayantha Liyanage   16:54
+Ohh.
+Mm-hmm.
+Mhm.
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   17:11
+It will be shared by through the application, so only there will be only one instance and it will be shared by the other services, so no creating object every time, so no memory or large memory utilization or no any object creation and.
+
+Jayantha Liyanage   17:14
+Mhm.
+Muhammed.
+Mhm. Okay.
+Mhm.
+Okay, fine. Let's go for the other design pattern. What are the other design patterns you know or you heard about?
+
+Gautam Chaudhari   17:37
+I recently learned, I have used, I recently learned that CQRS pattern. The, the, so the pattern says that whenever you have a complex operation, means you have large data DTO, your large DTO, so you should, you should have.
+
+Jayantha Liyanage   17:43
+Uh-huh, what is that?
+Mhm.
+Mhm.
+
+Gautam Chaudhari   17:56
+Two services, separate services for getting the data and for creating the resources or updating the resources, you should have another service class, so we should.
+
+Jayantha Liyanage   18:01
+Mhm.
+What is the reason behind that?
+
+Gautam Chaudhari   18:11
+Yeah, so because...
+So, whenever we create a single DTO for all the operations like getting and or posting the data in database, so there were unnecessary things we are doing sometimes in gate we don't require some things and and for posting we don't require.
+
+Jayantha Liyanage   18:19
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   18:33
+Uh, to make the code clean and to make this operation isolated, so we use this CPRS pattern.
+
+Jayantha Liyanage   18:34
+Mhm.
+Mhm.
+Uh-huh.
+Mhm.
+Okay, what are the other buttons do you know?
+
+Gautam Chaudhari   18:53
+Other patterns there.
+Well, factory pattern means that factory pattern will provide the instances of the.
+
+Jayantha Liyanage   19:02
+What is better? What is better?
+
+Gautam Chaudhari   19:04
+The factory, the factory pattern means you provide the you create the instance for the services and provide the instances.
+
+Jayantha Liyanage   19:15
+Mhm.
+How do you provide the instance?
+
+Gautam Chaudhari   19:18
+Complete the Sujith.
+
+Jayantha Liyanage   19:21
+What is the difference between the factory method in terms of, you know, rather just creating a single instance? So we are to use factory method. Just give me an example of the use case.
+
+Gautam Chaudhari   19:38
+I so.
+In old code, in.NET Core, they provide instances, but in old code, we have to create one another interface, another interface kind of interface between the hiring class and valid class, so that this interface class.
+
+Jayantha Liyanage   19:53
+Mhm.
+Mhm.
+
+Gautam Chaudhari   20:00
+For instance, based on the type of the services, so...
+
+Jayantha Liyanage   20:00
+Mm.
+Mhm.
+Mmhm.
+
+Gautam Chaudhari   20:07
+The.
+
+Jayantha Liyanage   20:11
+Okay, so are we just talking about the just creating a single instance from a single class only in the factory?
+
+Gautam Chaudhari   20:22
+Single.
+
+Jayantha Liyanage   20:23
+Can you turn on your camera now?
+
+Gautam Chaudhari   20:26
+Okay.
+Can you please repeat your question?
+
+Jayantha Liyanage   20:35
+So are we talking about just creating a single instance, one instance from the one class only or what is just give me an example, basically proper example.
+When to use, have you used factory method for something in your carrier?
+
+Gautam Chaudhari   20:53
+Yes, up.
+I haven't used that because since.
+Since five years, I'm using.NET Core and.NET supports this facility automatically by injecting the services, but yeah, I know why factory pattern is there because it provides the instance to the class, so instead of...
+
+Jayantha Liyanage   21:07
+Uh-huh.
+Mmh.
+Mhm.
+Oh.
+Mmhm.
+
+Gautam Chaudhari   21:23
+Uh, it is saying like that hiring class doesn't create the instance itself, and it will get through the this factor pattern.
+
+Jayantha Liyanage   21:28
+Mhm.
+Mhm.
+Okay, what are the other descent buttons you know?
+
+Gautam Chaudhari   21:37
+AW.
+
+Jayantha Liyanage   21:40
+What is template pattern?
+
+Gautam Chaudhari   21:44
+Template.
+I don't remember exactly about template pattern.
+
+Jayantha Liyanage   21:52
+What is the mediator pattern?
+
+Gautam Chaudhari   21:59
+No, I currently I'm not touching with respect.
+
+Jayantha Liyanage   22:00
+Passard.
+Facade, no adapter.
+
+Gautam Chaudhari   22:04
+No.
+
+Jayantha Liyanage   22:06
+Okay, so what are the architectural patterns you know and you have used?
+
+Gautam Chaudhari   22:13
+So in my API project, I use the layer architecture.
+
+Jayantha Liyanage   22:20
+Mm-hmm.
+
+Gautam Chaudhari   22:21
+So there is a API project and the business classes and my data access layer and DB creation are all different.
+In, I will create a super class library for the for this.
+
+Jayantha Liyanage   22:38
+Uh-huh.
+So, so...
+
+Gautam Chaudhari   22:42
+So, everything is in separate, yeah.
+
+Jayantha Liyanage   22:44
+What is clean architecture?
+
+Gautam Chaudhari   22:49
+clean architecture is almost same that layer architecture, the only thing I think of creating the repositive pattern.
+AW.
+
+Jayantha Liyanage   23:02
+Mhm.
+
+Gautam Chaudhari   23:02
+So it will make the clean architecture and it's kind of only layer kind of architecture in architecture. It's almost same.
+
+Jayantha Liyanage   23:11
+Uh-huh.
+What are the typical layers of the clean architecture?
+
+Gautam Chaudhari   23:22
+Main is API.
+
+Jayantha Liyanage   23:24
+Mmh.
+
+Gautam Chaudhari   23:25
+API API will for the future get the or request and the business then get access there.
+
+Jayantha Liyanage   23:32
+Muhammed.
+
+Gautam Chaudhari   23:36
+And if you are creating your database classes, then suppose you have a database first approach. So in my case, I had a database project as well, so I was creating the database structure from this database project and I was publishing into the database.
+
+Jayantha Liyanage   23:44
+Mmh.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   23:55
+P.
+
+Jayantha Liyanage   23:55
+What is a database entity?
+
+Gautam Chaudhari   23:59
+So database entity, suppose we have existing database and using some command, careful command, we create the DB context classes and then it will so in the table it will.
+
+Jayantha Liyanage   24:07
+Mhm.
+
+Gautam Chaudhari   24:18
+create the entity, entity classes. So we use that entity classes in our link to or and and and entity framework.
+
+Jayantha Liyanage   24:20
+Mmh.
+Mhm.
+Uh-huh.
+
+Gautam Chaudhari   24:32
+to work with the database classes.
+
+Jayantha Liyanage   24:34
+Mhm.
+Okay, have you used a microservice architecture?
+
+Gautam Chaudhari   24:37
+Okay.
+I haven't read, but I'm exploring right nowadays, yeah.
+
+Jayantha Liyanage   24:43
+You know, what is what is microservice architecture?
+
+Gautam Chaudhari   24:48
+The micro service is saying that your monolith application should be split into the specific feature or specific domain with their own databases. They should not share the same database. Every isolated feature or domain, it should have their own database and they should.
+
+Jayantha Liyanage   25:01
+Mhm.
+
+Gautam Chaudhari   25:10
+interact through the interface means one of the APIs or some of the event driven structure. So suppose you implement the Azure service bus or kind of Azure function. So they should use that Azure service bus and execute based on this.
+
+Jayantha Liyanage   25:10
+Uh-huh.
+Mhm.
+Mhm.
+Mhm.
+Mhm.
+Mmh.
+Mhm.
+Mhm.
+O.K.
+So what are the basically advantages and the disadvantages of using microservices?
+
+Gautam Chaudhari   25:43
+So, the main disadvantage of the microservices is that we have to create a separate project, a separate database for each, and then we have to suppose anything we want from another database we have to create the API, and we have to get to that.
+
+Jayantha Liyanage   25:52
+Mmh.
+Mhm.
+
+Gautam Chaudhari   26:04
+How specific microservice you will get the data, so to maintain maintaining.
+
+Jayantha Liyanage   26:07
+Mhm.
+
+Gautam Chaudhari   26:12
+Maintenance, maintaining the microservices is complicated and the advantage is that to make the application more available and we suppose any change in specific microservices, then we just deploy that microservices, not entire all the services. So in monolithic.
+
+Jayantha Liyanage   26:15
+Mmh.
+Mhm.
+Mhm, mhm.
+
+Gautam Chaudhari   26:32
+We made some changes in project. We have to deploy everything on the production of every phase of our environment. So that was difficult. So it will solve, it will solve, it solved the major problem.
+
+Jayantha Liyanage   26:35
+Mhm.
+Mhm.
+Okay.
+So in transaction processing, so what are the problems you may get when you use the microservices?
+Compared to Mulangadan.
+
+Gautam Chaudhari   26:59
+I actually, I haven't used that microservices, but I'm exploring, so that's what I put into my knowledge. I have this knowledge and I'm doing some POCs as well with this, creating the separate microservices and separate projects I try to connect through this API.
+
+Jayantha Liyanage   27:03
+Mhm, mhm.
+Mmhm.
+Mm-hmm. Uh-huh.
+Hope.
+Mm-hmm.
+Have you used the Azure Active Directory?
+
+Gautam Chaudhari   27:27
+Actually, I indirectly, I haven't used that. I have used the manage identity, and with some of the part of the administration of Azure was handling by the another team administrator, so they have.
+
+Jayantha Liyanage   27:32
+Mhm.
+Okay.
+Okay, so the...
+
+Gautam Chaudhari   27:45
+Pro at the logins was.
+
+Jayantha Liyanage   27:47
+Uh-huh.
+Okay, so can you explain me how you are going to authenticate? Let's say your back end has the two multiple or two web APIs and the front end is angular, right? So you have to basically...
+
+Gautam Chaudhari   27:49
+Where you losing that time?
+
+Jayantha Liyanage   28:08
+think and implement the authentication and authorization. How do you implement that? What do you do?
+
+Gautam Chaudhari   28:17
+So I use JWT authentication to authenticate my API.
+
+Jayantha Liyanage   28:22
+Uh-huh.
+Oh.
+
+Gautam Chaudhari   28:24
+And so yeah, so I have created separate API to authenticate this API. So there was an API which takes the parameters. So in my case, I was passing some credential and my API was
+
+Jayantha Liyanage   28:30
+Mhm.
+Mhm.
+Mhm.
+Mm-hmm.
+
+Gautam Chaudhari   28:42
+Authenticating to the third API third party, and I was getting the response on the basis of success of failure response. I was generating the token, so there are classes which we need to use or to generate the token and one security.
+P.
+which is needed to create this.
+
+Jayantha Liyanage   29:03
+Mhm.
+
+Gautam Chaudhari   29:07
+JWT to open and in that there is a concept called claims. In that claims I was maintaining my one of the ID which is required for my mobile application. And so yeah.
+
+Jayantha Liyanage   29:08
+Mmh.
+Mm.
+Uh-huh.
+Okay, so basically now let's say from your front end to back end, you are passing the UR JWD token. So the back end web API, what should it check? How do you make sure that authentication and authorization is, you know, checked?
+
+Gautam Chaudhari   29:23
+This way.
+
+Jayantha Liyanage   29:41
+Andy, it's there.
+
+Gautam Chaudhari   29:48
+So we use that middleware authentication, authorization middleware, right? So that authentication and authentication middleware checks that the token is valid or not, means.NET Core itself has created that token, and so it it against.
+
+Jayantha Liyanage   29:54
+AW.
+Mhm.
+Muhammed.
+
+Gautam Chaudhari   30:08
+Yeah, they are still validating that authentication.
+
+Jayantha Liyanage   30:10
+How to check valid or not? So what kind of properties you need to check to check the validity?
+
+Gautam Chaudhari   30:20
+So authentication middleware authenticate that and create one context data and in API level we use that authorized attribute which validates that whether it is validated or not.
+
+Jayantha Liyanage   30:30
+M.
+AW.
+Yes.
+Okay.
+So, okay, that is fine, but I'm asking in the authentication, so you need to check certain properties of the your token to make sure that the right token you are getting right, somebody else can send some and the token.
+
+Gautam Chaudhari   30:51
+Mm.
+
+Jayantha Liyanage   31:02
+So, what are the things you are going to verify?
+
+Gautam Chaudhari   31:07
+I think we don't need to do suppose because someone tried to change the token and it automatically rejected by the authentication middleware. So, because it will not match the that that it will it creates the one hashing key because we have used the security.
+
+Jayantha Liyanage   31:25
+Mhm.
+
+Gautam Chaudhari   31:27
+We have used security while creating that hashing signing prediction, so...
+
+Jayantha Liyanage   31:27
+Mhm.
+Mhm.
+
+Gautam Chaudhari   31:34
+At least user can change the claim data, but user can't change that signing value, so, so according based on the this value, so when it will be changed by user in it will automatically detect in.NET port side in authentication middleware that.
+
+Jayantha Liyanage   31:40
+Mm-hmm.
+Mhm.
+M.
+
+Gautam Chaudhari   31:53
+That someone had changed the data, so they're signing prediction. I don't remember. There are three parts of the token header, clips, and another one is signing key. It is generated, so it is hash key. It will not revert, like encryption.
+And, like, so, on the basis of this, it will not match the data.
+
+Jayantha Liyanage   32:19
+Uh-huh.
+Okay, let's say I want to have something like this in the controller side. So basically the, okay, I just want to see the authorization, right? So you have to implement that. And the, so I have a news controller.
+So that can be accessed by anyone. The second control is order controller. Only authenticated users can access it. The third one is admin controller. Only administrators can access that. So I want to implement the authorization.
+In the simplest possible way, right? What do you do?
+
+Gautam Chaudhari   33:07
+So, while creating that authentication, we can add the role and we can in that that controller which only which only can be accessible by that admin admin, then in that authorizes attribute I will mention the role.
+
+Jayantha Liyanage   33:25
+Uh-huh.
+
+Gautam Chaudhari   33:26
+and the admin keyword. So only the admin can get the access.
+
+Jayantha Liyanage   33:27
+Okay.
+Uh-huh.
+Mm.
+Okay. So, okay, fine. The REST, when you use the REST APIs, so it is basically using the web API in.NET. So, how do you make sure that you are using the REST standards? What are the standards, REST standards that you know?
+
+Gautam Chaudhari   33:59
+So basically it just it it rest it is not forcing you, but you should use the rest principle. Suppose means anyone can suppose anyone can if you if I create the gate action.
+
+Jayantha Liyanage   34:09
+Ohh.
+Mm-hmm.
+
+Gautam Chaudhari   34:18
+and I use the HTTP gate, then client will assume that it will return something. But there are also chances that that gate method can post as well and create the resource. But so we have to, as a developer, we have to make sure that the gate should only return the resource data.
+
+Jayantha Liyanage   34:21
+I know.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   34:38
+that should not create the data. And another is that server should not store any data. So that's why we use the JWT token. Everything we pass through that JWT and they can whatever required for the server. So it should be serverless. So whenever we
+
+Jayantha Liyanage   34:38
+Mhm.
+Mhm.
+Uh-huh.
+Mhm.
+Mhm.
+What are the rest standards? Basically, rest standards, you know.
+
+Gautam Chaudhari   35:03
+Or is it standard news?
+
+Jayantha Liyanage   35:03
+Let's say the way you define the route routes the URL. So what are the standards you know in the rest?
+
+Gautam Chaudhari   35:11
+Mhm.
+There are two mechanisms for the routing. One is count convention and another is attribute and mostly use the attribute routing. So whenever we use the attribute routing, we pass the parameters to our URL.
+
+Jayantha Liyanage   35:19
+No.
+Uh-huh.
+
+Gautam Chaudhari   35:28
+So.
+
+Jayantha Liyanage   35:29
+Mhm.
+
+Gautam Chaudhari   35:31
+And, and we we don't use the action method name. And in REST pool, we don't care about the method name. We just concern about the restrictive verbs. What is the verb there?
+
+Jayantha Liyanage   35:38
+Mhm.
+Okay.
+That's all.
+
+Gautam Chaudhari   35:51
+No.
+
+Jayantha Liyanage   35:52
+Is that good?
+
+Gautam Chaudhari   35:55
+Sorry.
+
+Jayantha Liyanage   35:55
+How do you version the the APIs?
+
+Gautam Chaudhari   36:00
+So there are multiple ways. So in my case, I use the header origin. So I was in on controller level, I was using that API version attributes. So and when client requesting my API, they passing the version number to the header.
+
+Jayantha Liyanage   36:05
+Mhm.
+Mhm.
+Mhm.
+Ohh.
+What else? What are the other ways?
+
+Gautam Chaudhari   36:24
+Other ways, URL-based versioning as well. Suppose we have a control V1, V1, V1, V2 kind of this.
+
+Jayantha Liyanage   36:28
+Oh.
+Mhm.
+No.
+
+Gautam Chaudhari   36:35
+Babu.
+
+Jayantha Liyanage   36:36
+Okay.
+
+Gautam Chaudhari   36:37
+I don't remember.
+
+Jayantha Liyanage   36:41
+Oh.
+Okay, okay, let's go to the some database side. So what are the database access technologies you have used?
+Database Access Technologies.
+
+Gautam Chaudhari   37:06
+Access technology means you will enter from a code.
+
+Jayantha Liyanage   37:12
+So I'm just talking about how you are going to access the databases.
+
+Gautam Chaudhari   37:18
+So basically through the entity programmer core I was created with debate context classes and to the get entered to promo code classes. I was teaching the database. I'm doing any or or current operation through this interval number 4. And. In one of the project is very previously I was using the stored procedures.
+
+Jayantha Liyanage   37:21
+Mhm.
+Yeah.
+Uh-huh.
+
+Gautam Chaudhari   37:42
+And some video.net mechanism.
+
+Jayantha Liyanage   37:42
+Uh-huh.
+Uh-huh.
+
+Gautam Chaudhari   37:45
+To face the database.
+
+Jayantha Liyanage   37:50
+Okay, in the entity framework, what is lazy loading? What is eagle loading?
+
+Gautam Chaudhari   37:58
+Lazy loading means suppose you have you want two tables data. So what we what will you do you page the first parent data and then loop the that parent data some of the keys and then fetching the second tables data. So first you.
+
+Jayantha Liyanage   38:02
+Mhm.
+Mhm.
+Mhm.
+Uh-huh.
+
+Gautam Chaudhari   38:17
+So, first, you are fetching the parent data, and on the basis of the parent data, you are the data, and one by one fetching the second table data, so it is kind of lazy load.
+
+Jayantha Liyanage   38:20
+Mhm.
+Mhm.
+Mhm.
+So how do you pick the second table data? What do you do?
+
+Gautam Chaudhari   38:33
+So so suppose you have a department table, right? And in that department you will get the department ID. So you face the department IDs and on the basis of department IDs you are pitching the all the employees which comes under that department ID. So it becomes a lazy loading. You are
+
+Jayantha Liyanage   38:38
+Mhm, mhm.
+M.
+Mmh.
+No.
+Mhm.
+
+Gautam Chaudhari   38:52
+First, retrieve the employee department data, and then...
+
+Jayantha Liyanage   38:55
+What kind of what kind of coding you need for that in the entry framework? Give me an example.
+
+Gautam Chaudhari   39:05
+Please, how to resolve this problem?
+
+Jayantha Liyanage   39:08
+Yeah, so, so what you are telling is you access in the department and the you want to get the employees associated with the department, right? So, in the entity framework query link query that you write, how do you write?
+
+Gautam Chaudhari   39:20
+Two.
+
+Jayantha Liyanage   39:26
+To do that.
+You need certain syntaxes.
+
+Gautam Chaudhari   39:30
+Who achieve the?
+Suppose, I suppose you mean how to achieve the eager loading, so instead of lazy loading, right? So, we have to make sure that we have used this concept in this referential integrity between these two tables and using this.
+
+Jayantha Liyanage   39:39
+MM mm.
+Mhm.
+Uh-huh.
+
+Gautam Chaudhari   39:53
+Suppose you want all the prints from the table, both the table, then we use the include keyword you need to do some more, or include, include, include.
+
+Jayantha Liyanage   40:02
+Input, input, we, we, which, OK, right, that's what I want to know, OK.
+
+Gautam Chaudhari   40:08
+Other, instead of include, sometimes mostly prefer is that we use the projection we use is the only the required columns from the both the table.
+
+Jayantha Liyanage   40:09
+Mmh.
+In.
+Ohh.
+
+Gautam Chaudhari   40:21
+So, yeah.
+
+Jayantha Liyanage   40:22
+Okay, so other than entity framework for data accessing, what else have you used?
+
+Gautam Chaudhari   40:23
+To.
+So, as I said, I have used the edio.net as well. So, like the SQL command, SQL execute.
+
+Jayantha Liyanage   40:37
+Mhm.
+Hold on.
+What else?
+Muhammed.
+
+Gautam Chaudhari   40:48
+These screws I have mostly used.
+
+Jayantha Liyanage   40:51
+So, what is the difference between accessing the database through ADO.NET or else through the Entity Framework? What are the advantages, disadvantages, when to use what?
+
+Gautam Chaudhari   41:06
+So the main I will take the list list boilerplate means boilerplate means we have to do with a list code while using the entity primer port and we will get more control and entity primer core directly.
+
+Jayantha Liyanage   41:15
+Mhm.
+Mhm.
+
+Gautam Chaudhari   41:25
+Indirectly supports SQL injection, so we don't have to worry about that because everything is parameter right in entity framework.
+
+Jayantha Liyanage   41:29
+EE.
+Mhm.
+
+Gautam Chaudhari   41:33
+And for easy to coding because we have all the entities and we can use the two types of data queries, method query and that other query type. So both the way we can achieve
+
+Jayantha Liyanage   41:36
+Mmh.
+Uh-huh.
+Mhm.
+
+Gautam Chaudhari   41:53
+or do some database operation. So easy to write, easy to use.
+
+Jayantha Liyanage   41:58
+Mhm.
+
+Gautam Chaudhari   42:06
+And we have to do not every time we have to do the open connection, close connection in this in old code. So that will be handled by an entity framework itself.
+
+Jayantha Liyanage   42:06
+Mhm.
+Mm-hmm.
+Mhm.
+Okay, so what is overloading and overriding?
+
+Gautam Chaudhari   42:30
+So, overloading says that we can have multiple same name methods with different parameters, so the parameter will be different, or either they should have different sequence.
+
+Jayantha Liyanage   42:36
+No.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   42:47
+and we can have different count on the basis of parameter. Either you have different parameter, either you have different sequence and either you have a count of the both the parameters should be different. So we can achieve this method overloading and you will
+
+Jayantha Liyanage   42:50
+Mhm.
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   43:04
+you will have the same name of the method, method overloading and method overriding means you have a parent class and you have a virtual methods. So we can do that virtual method or either use the parent class method or we create override your own.
+
+Jayantha Liyanage   43:13
+M.
+Mhm.
+Muhammed.
+
+Gautam Chaudhari   43:24
+Method in your child's class.
+
+Jayantha Liyanage   43:26
+Mhm.
+K.
+So in the then overriding class, do you have to use any any keywords?
+
+Gautam Chaudhari   43:38
+Yeah, override keywords and another using new keywords to hide the parent class method.
+
+Jayantha Liyanage   43:40
+Mm-hmm.
+Mhm mhm.
+What is the difference between the interfaces and the abstract classes?
+
+Gautam Chaudhari   43:50
+So, interface only defines the contracts, but nowadays, after C# 8, also we can write the method in interface as well. Astrackless has the best methods, some common logic.
+
+Jayantha Liyanage   44:02
+Mhm.
+Yes.
+Mmh.
+
+Gautam Chaudhari   44:08
+In we implement already implemented and in abstract class and some abstract methods which can be forcefully should be implemented through by child classes, so the major difference is that.
+
+Jayantha Liyanage   44:09
+Ohh.
+Mhm.
+Uh-huh.
+
+Gautam Chaudhari   44:26
+So, this after class has a method and interface may only has contract.
+
+Jayantha Liyanage   44:34
+Mm-hmm.
+
+Gautam Chaudhari   44:35
+AW.
+Both we contact that cannot create the instance of integration after class and extract class can implement.
+Interfaces, but the interface cannot implement anything.
+
+Jayantha Liyanage   44:49
+Mhm.
+Ohh.
+K.
+M.
+OK, do you know what is Saga pattern?
+
+Gautam Chaudhari   45:03
+I know.
+
+Jayantha Liyanage   45:05
+Mhm.
+
+Gautam Chaudhari   45:05
+I'm going to learn this, because I think mostly using microservices.
+
+Jayantha Liyanage   45:11
+M.
+What is even architectures and the technologies, you know, even driven?
+
+Gautam Chaudhari   45:20
+You want driven in which only one thing I know that Azure service bus, so we we use the Azure service bus and there is a background function, so we pass the our API the message to the Azure bus queue and then that.
+
+Jayantha Liyanage   45:26
+Ohh.
+B.
+Mhm.
+Yeah.
+Mhm.
+
+Gautam Chaudhari   45:39
+Whenever you have the message, the Azure function will execute that Q message, so this is one you went to one.
+
+Jayantha Liyanage   45:42
+Mhm.
+Mmh.
+Mhm.
+Okay, so how is your Azure knowledge? How many years experience on Azure do you have? And what Azure features have you used?
+
+Gautam Chaudhari   46:01
+A direct hands-on experience in Azure, I have three years in which I have yes creating the CS with the pipeline Azure App Service Application Insight and keyboard I have used, but POC perspective I have done multiple POCs of Azure Bus service Azure function.
+
+Jayantha Liyanage   46:09
+Mhm.
+Mhm.
+Ohh.
+Uh-huh.
+
+Gautam Chaudhari   46:21
+Um...
+Block storage, and I'm doing doing.
+
+Jayantha Liyanage   46:25
+What is the API in?
+
+Gautam Chaudhari   46:28
+API is the 6th before means whenever you hit the request, it will it is passing through the API.
+And then the request pass through the power. So there are multiple purposes so we can achieve the rate limiting. We can add the rate limiting inbound restriction.
+
+Jayantha Liyanage   46:38
+So what is the purpose of that? What does it do?
+Ohh.
+Uh-huh.
+
+Gautam Chaudhari   46:54
+We can suppose we have to modify the request before passing the Azure App Service. API has the the API URL is different, which is only client know, but internally client directly doesn't know the our.
+
+Jayantha Liyanage   47:02
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   47:14
+Azure App Service URL, so we register our Azure App Services through API and API and provide their own URL to the client, so that is 1 benefit that client doesn't know the where is.
+
+Jayantha Liyanage   47:16
+Mhm.
+Uh-huh.
+Uh-huh.
+
+Gautam Chaudhari   47:33
+Our app services located means our project is located.
+
+Jayantha Liyanage   47:38
+Mm.
+
+Gautam Chaudhari   47:39
+I mean, you can add some security features in API.
+
+Jayantha Liyanage   47:44
+Mm-hmm.
+Okay, um...
+Right, you said that you have used the Azure functions, so how did you authenticate that your functions?
+
+Gautam Chaudhari   47:59
+I just done done some of Azure function, I didn't.
+Do any authentication. I just created one Azure function. There are multiple function Azure function. You can write this time trigger.
+
+Jayantha Liyanage   48:08
+Mhm.
+What is the advantage of having the few functions?
+
+Gautam Chaudhari   48:14
+Or we can.
+
+Jayantha Liyanage   48:15
+Advantage as well as disadvantages.
+
+Gautam Chaudhari   48:20
+The advantage is that suppose we have an API and we don't want that API to take more time to execute that everything. Suppose we split the work and that not mandatory work means not any required work we can ask.
+
+Jayantha Liyanage   48:31
+AW.
+Uh-huh.
+
+Gautam Chaudhari   48:41
+To the background process, support sending the email or creating any file processing tasks we can send to the Azure function.
+
+Jayantha Liyanage   48:42
+Uh-huh.
+Rohini.
+Mhm.
+Mhm.
+Right, so you said that Azure App Services also you have used. Let's say you have two web APIs and the so you have deployed these in the Azure App Service, right? So now basically.
+One of the web API sometimes getting restarted, right? Sometimes only. So you have to see what is going on. What do you do?
+
+Gautam Chaudhari   49:27
+So, there are two projects and both are deploying the separate app services, and one of them is down, right? So, how to identify this, you?
+
+Jayantha Liyanage   49:36
+No, not down always. Sometimes, sometimes get it restarted. That's all.
+
+Gautam Chaudhari   49:45
+means we have to find it. Sometimes it restarted.
+
+Jayantha Liyanage   49:47
+We have to find what what is the issue is.
+
+Gautam Chaudhari   49:54
+I mostly check the application inside with anything wrong in the log, then I will find, but in Azure level.
+
+Jayantha Liyanage   49:58
+Ohh.
+Ohh.
+In the application insight, what exactly can you check?
+Mm.
+
+Gautam Chaudhari   50:15
+Uh, any APIs, because of any APIs, CPU is going high or taking the memory, occupying the memory high.
+
+Jayantha Liyanage   50:23
+Mhm.
+
+Gautam Chaudhari   50:24
+Or what is maybe some API, because of some APIs, CPU threshold increase, right? And because of wrong lifetime, we have each register in the app service API application.
+
+Jayantha Liyanage   50:31
+Mhm.
+Mhm, mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   50:43
+So maybe that happens, but Azure level, either I will check that Azure metrics, so just check the that.
+
+Jayantha Liyanage   50:45
+Mhm.
+
+Gautam Chaudhari   50:55
+chart, but I don't, I haven't faced this kind of situation, so I don't have, I don't have any answer for this.
+
+Jayantha Liyanage   50:56
+Mhm.
+So basically, let's say one of the DevOps team or the infra team, a training engineer has looked into this first. And he has found out that this is happening.
+during the peak time, right? This is happening during the peak time only.
+So what do you think of now?
+
+Gautam Chaudhari   51:27
+Okay.
+
+Jayantha Liyanage   51:30
+What is the hose?
+
+Gautam Chaudhari   51:35
+Because multiple users are hitting at the same time that specific API and the API is taking time to execute process this API. So either it holds with every API we assign the thread right and
+
+Jayantha Liyanage   51:41
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   51:53
+Maybe feel exhausting.
+maybe there are chances of stuck in which databases taking time to retrieve the
+
+Jayantha Liyanage   52:04
+Mhm.
+Okay, so now we have to, you know, provide a fix so that fix should not take too much time. And the client says, okay, so I cannot wait. My clients are there. You have to fix this within one hour, maximum one hour. What do you do?
+
+Gautam Chaudhari   52:29
+AW.
+one hour is not possible because we have to debug that API thoroughly. We have to find out the exact cost if it is due to database query or if it was mostly it is happening due to database because sometimes we don't indexing and proper joins and all that.
+
+Jayantha Liyanage   52:37
+Ohh.
+Mm-hmm.
+Mhm, mhm.
+Uh-huh.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   52:51
+So if it is fixing while changing some configuration, then we can do some configuration changes and...
+
+Jayantha Liyanage   52:57
+Oh, so fixing in the sense, basically what client says is, basically, I don't want this problem and the my client should not have a problem using my system now, right? That's why.
+Right.
+
+Gautam Chaudhari   53:18
+AW.
+
+Jayantha Liyanage   53:19
+So basically they should be able to use my system and they should get the work done, right? That's all he says.
+Your detail finding and all you can take it later in the next screen.
+But I need a quick resolution. What do you do?
+
+Gautam Chaudhari   53:47
+Actually, it's funny, but sometimes I was using restarting the server, so if you're getting in normal position, so...
+
+Jayantha Liyanage   53:53
+Mhm.
+Mhm.
+
+Gautam Chaudhari   53:58
+So, this way, this was also helpful for us, and...
+
+Jayantha Liyanage   54:02
+Mhm.
+The soul.
+Kaling.
+
+Gautam Chaudhari   54:11
+Right.
+
+Jayantha Liyanage   54:12
+Do you know what is scaling?
+
+Gautam Chaudhari   54:17
+Yeah, scaling. There are two types of scaling, right? Vertical scaling and horizontal scaling. Horizontal scaling means that in this case of suppose there is a peak time, then we had to write something in Azure App Service that suppose.
+
+Jayantha Liyanage   54:21
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   54:35
+West or CPU spike is greater than 80%, then increase the instance up to the this one.
+Right.
+
+Jayantha Liyanage   54:45
+Uh huh.
+
+Gautam Chaudhari   54:46
+So, this way, I just suppose we have a good plan.
+service plan, premium kind of plan. So they provide this kind of services. So they also provide the geolocation services. I don't know how to do that, but I know about the increasing the instances. There are some configuration we have to do in Agara service. So we have to write some small code. So we have to mention that.
+
+Jayantha Liyanage   54:56
+Mhm.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   55:12
+Suppose CPU is spike is 80%, then increase the instance up to the file 10, and if the CPU spike time is...
+
+Jayantha Liyanage   55:12
+Mhm.
+Mhm.
+
+Gautam Chaudhari   55:22
+Is low for this 15 minutes, then decrease the instances, so we can do that or vertical means either it is a static contribution right from the we have to we have good memory, good CPU instances.
+
+Jayantha Liyanage   55:23
+Mhm.
+Ohh.
+Mhm.
+Mmh.
+
+Gautam Chaudhari   55:44
+To handle this kind of multiple requests.
+
+Jayantha Liyanage   55:45
+Okay, so now I will come back to original problem. In the peak time only, one service is getting restarted. Client need the one hour resolution.
+So, you said that you can't.
+Right, so if you scale this horizontally, can it support?
+
+Gautam Chaudhari   56:08
+Yes, because it it is increase the instances, so traffic will get divert to the multiple instances.
+
+Jayantha Liyanage   56:19
+Let's see, this is what I was expecting.
+
+Gautam Chaudhari   56:19
+So the node will be.
+Yeah, I thought whether it is implementing or not, yeah.
+
+Jayantha Liyanage   56:26
+Well, that's the thing, right? So we are not telling you the exact things. So we see whether you know the concepts and the weather when the right time comes, whether you can apply it.
+
+Gautam Chaudhari   56:39
+Yeah, because right, this is, you know, this is Azure is a pay as you go, right? So sometimes clients don't want to pay more, right?
+
+Jayantha Liyanage   56:40
+Okay, fine, fine.
+Yeah.
+No, he doesn't say anything, right? He said, within one hour, I need this.
+Okay, right, so the okay, Gautam Chandra, right, so the your name, right, so the, okay, now it's come to the final stage and you had to write a small program. So in your work, how much coding, how much the management stuff are you doing right now?
+In percentage.
+
+Gautam Chaudhari   57:23
+I just for a little bit. I'm currently not working. I'm finding the new job. I left my job recently.
+
+Jayantha Liyanage   57:29
+Mhm.
+Let's say, let's say in the past job.
+
+Gautam Chaudhari   57:34
+Yeah, so I was, so all the things I was doing, so development, writing the APIs, writing the queries, creating the database tables and all that, and deployment of the application.
+
+Jayantha Liyanage   57:39
+Uh-huh.
+Mhm.
+Mhm.
+
+Gautam Chaudhari   57:49
+And also the client interaction.
+
+Jayantha Liyanage   57:54
+Okay, so, right, fine. Let's say, so you can see my name, even your name, right? So, so this is the basically thing. We had to write algorithm. I don't want you to write it now. But the, so you can tell that.
+approach. So this is what. So any name that is given, maybe my name, your name, right? So you had to find which letter has the maximum number of occurrences. If you see the my name, so my name.
+
+Gautam Chaudhari   58:32
+M.
+
+Jayantha Liyanage   58:33
+A is the one which has the maximum number of occurrences, which is 5. So in Java basically algorithm, you take the input, the name, and the, so the, you run it, and the basically it identifies that A is the one with maximum occurrences and the print.
+A number for occurrences 5, right?
+So you had to write this algorithm, right? So what do you do? Just think a little bit and tell me the UI approach.
+
+Gautam Chaudhari   58:59
+Ohh.
+So I will do, I will use the dictionary. So in the dictionary, I will have a character type and integer type. And that character I will use, I will look that the input character by character. And I will first time I will
+
+Jayantha Liyanage   59:12
+No.
+Mhm.
+Uh huh.
+
+Gautam Chaudhari   59:27
+Check that that character is existing or not. If it is not existing, then I will add it next time. If it is, if it is there, then I will the integer count. So this way I will get the your characters count and then again I will go add or in the in the last I will. I will use the one loop.
+
+Jayantha Liyanage   59:29
+Yeah.
+Mhm.
+Mm.
+Mhm.
+Mhm.
+Uh-huh.
+
+Gautam Chaudhari   59:48
+And that loop, I will check the maximum.
+
+Jayantha Liyanage   59:51
+Mhm.
+
+Gautam Chaudhari   59:52
+Maximum integer count, and that will be the final output.
+
+Jayantha Liyanage   59:53
+Mhm.
+Mhm.
+Okay, so the second question is basically, there is one name, right? So even when, when you reverse the name,
+Sorry, it is said.
+But when you reverse the name.
+
+Gautam Chaudhari   1:00:20
+You mean palindrome?
+
+Jayantha Liyanage   1:00:21
+Right, yeah.
+
+Gautam Chaudhari   1:00:23
+Balachander.
+
+Jayantha Liyanage   1:00:24
+Yeah, yeah, yeah. So how do you write an algorithm to check whether given word is the pill in row?
+
+Gautam Chaudhari   1:00:32
+For that, uh...
+For that, I will, I will, I will do the follow, I will on the basis of length of the name, I will get the last characters index count and I will, I will use the string builder.
+
+Jayantha Liyanage   1:00:43
+Uh-huh.
+Mhm.
+Uh huh, uh huh.
+Mm.
+
+Gautam Chaudhari   1:00:59
+And, one by one, the last character, I will add in that.
+In builder, so it will create the new string, and I will that match the string string with a input.
+
+Jayantha Liyanage   1:01:07
+Muhammed.
+Okay, let's say you don't, you are not allowed to add to another string or string build or whatever, right? So what you should do is basically in the least possible way, you have to find this, right? Basically, the performance is very important.
+
+Gautam Chaudhari   1:01:20
+Mm.
+I think I will.
+
+Jayantha Liyanage   1:01:30
+right, the resource usage and the performance. What is the best solution?
+
+Gautam Chaudhari   1:01:32
+The.
+Yeah.
+I think swapping mechanism I have to use.
+So, I have to call you.
+
+Jayantha Liyanage   1:01:42
+Which mechanism?
+
+Gautam Chaudhari   1:01:44
+Swapping.
+
+Jayantha Liyanage   1:01:46
+Uh-huh.
+
+Gautam Chaudhari   1:01:46
+Swapping the characters.
+
+Jayantha Liyanage   1:01:49
+Uh-huh.
+
+Gautam Chaudhari   1:01:49
+So I would have to use one temporary variable and
+
+Jayantha Liyanage   1:01:52
+You, you cannot use the SAP any inbuilt, you know, features to SAP the entire word. OK, right, so then nothing to do, so the you can't do, you have to write yourself.
+
+Gautam Chaudhari   1:02:11
+Yeah, that means if people don't want to, but...
+We have to use for loop that is mandatory because we have to check that every character, right? So I will check the first character.
+
+Jayantha Liyanage   1:02:19
+Uh-huh.
+What is the length? What is the length?
+Lint.
+
+Gautam Chaudhari   1:02:25
+So.
+Oh, the the sprinkling.
+
+Jayantha Liyanage   1:02:28
+You run the for loop for which length?
+
+Gautam Chaudhari   1:02:33
+The I will get the string length N -1 and I will check the first character and I will check first first character and last character. If it is matched then true and then I will move to the second character and again N 1 - 1 character.
+
+Jayantha Liyanage   1:02:38
+So.
+Mhm.
+M.
+Ohh.
+Mmh.
+
+Gautam Chaudhari   1:02:51
+If it, they both match, then I will, if any one of them fail don't match, then I will return the loop, yeah.
+
+Jayantha Liyanage   1:02:53
+OK, fine, but OK.
+M.
+Right now.
+OK, so right, Sanjeev, there will be another interview, right?
+So, but the thing is...
+So would you like to join us, SSC first?
+
+Gautam Chaudhari   1:03:27
+Sorry.
+
+Jayantha Liyanage   1:03:27
+See, would you like to join as a senior software engineer?
+
+Gautam Chaudhari   1:03:31
+Yes.
+
+Jayantha Liyanage   1:03:32
+Okay, so anyway, there will be another interview, maybe one or two, right? Client interviews there, client is very tough, right? So we are using microservices. You should know before next your interview.
+you should know microservices well. You should know saga patterns, how to, you know, do the, what you call the distributed transaction processing. And the clean architecture, one thing you missed, actually, you didn't know typical layers and those.
+You should know that really well. Then, Azure, yeah, so certain things, you know, what you knew and not, right? So get ready and they come for the next one. So this one, basically, as SSC, you will be passed.
+OK, all the best for the you are next one, right? Thank you.
+
+Gautam Chaudhari   1:04:34
+Yeah.
+Yeah. Thank you, Jen. Yeah.
+
+Jayantha Liyanage   1:04:38
+Okay.
+
+Neha Thomas stopped transcription

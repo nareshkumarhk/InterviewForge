@@ -1,0 +1,233 @@
+{
+  "evaluation_id": "90538706",
+  "prompt_versions": {
+    "evidence_extraction": "v1.0",
+    "dimension_scoring": "v1.0",
+    "output_naresh": "v1.0",
+    "output_quick": "v1.0"
+  },
+  "transcript_file": "tests/transcripts/L1 Interview Manas Ranjan Jena Tech Lead- .Net Dbiz.ai-20260515_123011-Meeting Recording.mp4.ordered.transcript.txt",
+  "role": {
+    "role_title": ".NET Lead / Backend Lead",
+    "role_level": "lead",
+    "experience_years": "7-12",
+    "must_have_skills": [
+      {
+        "skill": "C#",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Enterprise-grade backend development"
+      },
+      {
+        "skill": ".NET Core",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Backend services, performance optimization"
+      },
+      {
+        "skill": "RESTful APIs & Microservices",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and implement scalable service architecture"
+      },
+      {
+        "skill": "SQL Databases",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "SQL Server/PostgreSQL, query optimization"
+      },
+      {
+        "skill": "Cloud Platforms",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Azure or AWS, deployment and scaling"
+      },
+      {
+        "skill": "Authentication & Security",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "OAuth2, JWT, IdentityServer implementation"
+      }
+    ],
+    "nice_to_have": [
+      "Docker & Kubernetes",
+      "Message Queues (RabbitMQ, Kafka)",
+      "Event-driven architecture",
+      "CI/CD pipeline design"
+    ],
+    "key_responsibilities": [
+      "Design and implement backend services using .NET Core",
+      "Lead technical architecture and microservices design decisions",
+      "Optimize database performance and queries",
+      "Conduct code reviews and mentor team members",
+      "Collaborate with frontend and DevOps for seamless integration",
+      "Implement security best practices and authentication mechanisms",
+      "Drive continuous improvement and stay current with .NET ecosystem"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Bilal",
+    "duration_minutes": 60,
+    "date": "2026-05-15"
+  },
+  "evidence": {
+    "technical_statements": [
+      {
+        "topic": "Generics in .NET",
+        "quote": "So, basically, generics means whenever writing code, we are writing different types, OK?",
+        "depth": "superficial",
+        "evidence_type": "neutral",
+        "context": "Initial explanation of generics without much detail"
+      },
+      {
+        "topic": "Generics in .NET",
+        "quote": "And generally, basically, it will be help us, basically, the reusability we can defend one method it equal purpose, it can take multiple parameters, different types of parameters, basically code reusability and type safety and compile time we will get the issue if anything is missing.",
+        "depth": "detailed",
+        "evidence_type": "neutral",
+        "context": "Explained benefits of generics like reusability and type safety"
+      },
+      {
+        "topic": "Generics in .NET",
+        "quote": "See, see the object means we have to do the basically boxing, unboxing, all these things we have to do, so generics will make it is basically not doesn't take memory, basically boxing, unboxing things will not happening during the wrong time.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained advantage of generics over objects in terms of memory efficiency"
+      },
+      {
+        "topic": "Generics in .NET",
+        "quote": "So, basically, we have to, whenever define a method, we have to restrict that the type, basically, which type of parameter, basically, we have to class or interface, we have to accept that one generic constraints, so we have to define.",
+        "depth": "detailed",
+        "evidence_type": "neutral",
+        "context": "Mentioned generic constraints but lacked specific examples"
+      },
+      {
+        "topic": "Microservices",
+        "quote": "Uh, no, uh, no, I will not work the microservices.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "context": "Admitted lack of experience with microservices"
+      }
+    ],
+    "ownership_signals": [
+      {
+        "type": "exposure",
+        "quote": "From cloud perspective, you have strong exposure to Azure and AWS both",
+        "context": "Described as having exposure rather than ownership in cloud technologies"
+      }
+    ],
+    "problem_solving_approach": {
+      "clarifies_requirements": true,
+      "systematic_debugging": false,
+      "handles_edge_cases": false,
+      "notes": "Asked clarifying questions before coding. Did not demonstrate systematic debugging or handling of edge cases."
+    },
+    "buzzwords_flagged": [
+      "microservices",
+      "scalable",
+      "cloud-native"
+    ]
+  },
+  "scores": [
+    {
+      "name": "Fundamentals",
+      "score": 3.0,
+      "reasoning": "The candidate demonstrated a solid understanding of generics in .NET, explaining benefits like reusability, type safety, and memory efficiency. However, the explanation was somewhat superficial and lacked depth in certain areas, such as generic constraints.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "Explained advantage of generics over objects in terms of memory efficiency",
+          "topic": "Generics in .NET"
+        },
+        {
+          "type": "neutral",
+          "quote": "Mentioned generic constraints but lacked specific examples",
+          "topic": "Generics in .NET"
+        }
+      ]
+    },
+    {
+      "name": "Coding",
+      "score": 2.5,
+      "reasoning": "The candidate asked clarifying questions before coding, indicating a thoughtful approach. However, there was no evidence of systematic debugging or handling of edge cases, which are critical for a lead role.",
+      "evidence": [
+        {
+          "type": "neutral",
+          "quote": "Asked clarifying questions before coding. Did not demonstrate systematic debugging or handling of edge cases.",
+          "topic": "Problem solving approach"
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "score": 2.0,
+      "reasoning": "The candidate admitted to lacking experience with microservices, which is a critical requirement for the role. There was no evidence of understanding or designing scalable service architecture.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Uh, no, uh, no, I will not work the microservices.",
+          "topic": "Microservices"
+        }
+      ]
+    },
+    {
+      "name": "Ownership",
+      "score": 2.0,
+      "reasoning": "The candidate has exposure to cloud technologies but did not demonstrate ownership or leadership in any significant projects or initiatives.",
+      "evidence": [
+        {
+          "type": "exposure",
+          "quote": "From cloud perspective, you have strong exposure to Azure and AWS both",
+          "context": "Described as having exposure rather than ownership in cloud technologies"
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "score": 2.5,
+      "reasoning": "The candidate's explanations were somewhat clear but lacked structure and depth. There was a tendency to use filler words and repeat phrases, which affected clarity.",
+      "evidence": [
+        {
+          "type": "neutral",
+          "quote": "So, basically, generics means whenever writing code, we are writing different types, OK?",
+          "topic": "Generics in .NET"
+        }
+      ]
+    },
+    {
+      "name": "Practical",
+      "score": 2.5,
+      "reasoning": "The candidate has exposure to cloud platforms but did not provide detailed examples of practical experience in production environments or debugging sessions.",
+      "evidence": [
+        {
+          "type": "exposure",
+          "quote": "From cloud perspective, you have strong exposure to Azure and AWS both",
+          "context": "Described as having exposure rather than ownership in cloud technologies"
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "score": 2.0,
+      "reasoning": "There was no evidence provided of active learning or adaptation to new technologies. The candidate did not demonstrate a proactive approach to learning beyond their current exposure.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Uh, no, uh, no, I will not work the microservices.",
+          "topic": "Microservices"
+        }
+      ]
+    }
+  ],
+  "interviewer_analysis": null,
+  "decision": {
+    "recommendation": "Reject",
+    "reasoning": "Score 2.30 below threshold 4.2",
+    "weighted_score": 2.3,
+    "threshold": 4.2
+  },
+  "feedback_naresh": "# .NET Lead / Backend Lead Interview - L1_Technical\n\n**Status:** Reject\n\n## Remarks\n\nCandidate has 7-12 years of experience, applying for a .NET Lead role. Key areas include C#, .NET Core, and microservices.\n\n- Fundamentals: 3.0/5 - Demonstrated understanding of generics in .NET, citing benefits like memory efficiency (\"Explained advantage of generics over objects in terms of memory efficiency\"). Lacked depth in generic constraints.\n- Coding: 2.5/5 - Asked clarifying questions but did not show systematic debugging or edge case handling, which are critical for a lead role.\n- Architecture: 2.0/5 - Admitted lack of experience with microservices (\"Uh, no, uh, no, I will not work the microservices\"), a critical requirement for scalable service architecture.\n- Ownership: 2.0/5 - Strong exposure to Azure and AWS but no evidence of ownership or leadership in cloud projects (\"From cloud perspective, you have strong exposure to Azure and AWS both\").\n- Practical: 2.5/5 - Exposure to cloud platforms without detailed examples of practical production experience.\n\nMain concern: The candidate lacks experience and understanding of microservices, a critical component for the role. Additionally, there is no evidence of leadership or ownership in significant projects, which is expected at the lead level.\n\nCalibration: Candidate's performance does not align with the lead level expectations. The experience and exposure are present, but the depth and ownership required for a lead role are missing.\n\n## Interview Reliability Note\n\n**Reliability:** High\n\nThe interview covered key areas such as fundamentals, coding, and architecture within 60 minutes. The candidate had ample opportunity to demonstrate depth and ownership.\n\n## Overall Take\n\nThe candidate has exposure to relevant technologies but lacks the depth and ownership needed for a lead role. The absence of microservices experience and leadership in cloud projects is a significant gap. The fundamentals are present but not at the level required for a lead position.\n\n## One-Line Summary\n\nExposure without depth or ownership - not ready for a lead role.",
+  "feedback_quick": "# Quick Interview Summary\n\n**Role:** .NET Lead / Backend Lead (Lead)  \n**Recommendation:** Reject  \n**Score:** 2.3/5.0\n\n## Quick Take\nThe candidate shows basic understanding of .NET and cloud technologies but lacks the depth and leadership experience required for a lead role. Critical gaps in microservices knowledge and ownership of projects are concerning for this position.\n\n## Key Points\n- \u2713 Basic understanding of generics (3.0/5): Explained memory efficiency benefits but lacked depth in constraints.\n- \u2717 Coding skills below lead level (2.5/5): Missed systematic debugging and handling of edge cases.\n- \u2717 Lack of microservices experience (2.0/5): Admitted no experience, which is critical for the role.\n- \u2717 Limited ownership and leadership (2.0/5): No significant project leadership or initiative ownership demonstrated.\n\n## Next Steps\nDo not proceed. The candidate does not meet the critical requirements for the lead role, particularly in microservices and project ownership.",
+  "processing_time_seconds": 29.28,
+  "timestamp": "2026-05-17T12:28:44.909936"
+}

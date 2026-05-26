@@ -1,0 +1,87 @@
+Interviewer: Hi, thanks for joining. Let's start with some fundamentals. Can you explain how HashMap works in Java?
+
+Candidate: Sure. HashMap uses hashing to store key-value pairs. It calls the hashCode() method on the key to determine which bucket to place the entry in. When there's a collision - when two keys hash to the same bucket - it uses chaining, which is a linked list of entries in that bucket. In Java 8 and later, if a bucket accumulates more than 8 entries, it converts the linked list to a red-black tree for better lookup performance.
+
+Interviewer: Good. What happens when the HashMap needs to resize?
+
+Candidate: When the number of entries exceeds the load factor times capacity - the default load factor is 0.75 - it doubles the capacity and rehashes all existing entries into the new buckets. This is an O(n) operation.
+
+Interviewer: Now let's talk about your experience with distributed systems. Tell me about the architecture at your current company.
+
+Candidate: We use microservices at my company. Each service is responsible for a different domain of the business logic. We have maybe 15-20 services in total.
+
+Interviewer: How do the services communicate with each other?
+
+Candidate: We use Kafka for messaging between most services. Some services use REST APIs for synchronous calls.
+
+Interviewer: Why did you choose Kafka specifically?
+
+Candidate: The team decided to use Kafka before I joined the company, so I'm not sure of the exact reasoning. But from what I understand it helps with decoupling.
+
+Interviewer: Do you know how Kafka handles message ordering or what happens when a consumer fails?
+
+Candidate: Kafka partitions messages. Ordering is guaranteed within a partition. If a consumer fails... I think the messages are retried but I'm not exactly sure of the specifics of how that works.
+
+Interviewer: Okay. Can you describe a technical challenge you personally solved in the last year?
+
+Candidate: Yes, we had a performance issue where some API endpoints were very slow. I investigated and found that the ORM was generating N+1 queries. I fixed it by adding select_related and prefetch_related calls to the queryset. The endpoint went from taking 8 seconds to under 200 milliseconds.
+
+Interviewer: Did you identify the root cause independently or was it flagged to you?
+
+Candidate: My manager noticed the slow endpoints in our APM tool and asked me to look into it. I then identified the N+1 issue using Django Debug Toolbar.
+
+Interviewer: Let's do a coding problem. Given a string, find the length of the longest substring without repeating characters.
+
+Candidate: Okay, let me think. A brute force approach would be to check every possible substring and see which one has no repeating characters. That would be O(n³) or O(n²) time which isn't great.
+
+A better approach is to use a sliding window with a hash set. I'll maintain a window with two pointers - left and right. I expand right, and if I encounter a duplicate character, I move left forward until the duplicate is gone. At each step I track the maximum window size.
+
+Interviewer: Can you code that up?
+
+Candidate: Sure.
+
+def length_of_longest_substring(s):
+    char_set = set()
+    left = 0
+    max_length = 0
+
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_length = max(max_length, right - left + 1)
+
+    return max_length
+
+Interviewer: What's the time and space complexity?
+
+Candidate: Time complexity is O(n) since each character is added and removed at most once. Space complexity is O(min(m, n)) where m is the size of the character set and n is the string length.
+
+Interviewer: What edge cases should we handle?
+
+Candidate: Empty string - would return 0, which is correct since left starts at 0 and max_length stays 0. Single character - works fine. String with all same characters like "aaaa" - the window would shrink to size 1 each time. All unique characters - no shrinking needed, returns full length.
+
+Interviewer: Nice. Now, have you worked with any cloud infrastructure?
+
+Candidate: We use AWS at my company. We have EC2 instances, RDS for databases, and S3 for file storage. We also use ECS for container orchestration.
+
+Interviewer: Have you personally set up or managed any of that infrastructure?
+
+Candidate: Not really, our DevOps team handles the infrastructure. I sometimes look at CloudWatch logs when debugging production issues, but I don't provision or configure the infrastructure directly.
+
+Interviewer: Tell me about how you've grown technically in the past 2 years.
+
+Candidate: I've gotten much stronger with Python and Django. I've also learned more about database optimization - I've done a lot of query optimization work. I've been reading about system design lately because I want to move into more senior roles. I've been going through system design resources online.
+
+Interviewer: Any specific books or courses?
+
+Candidate: Designing Data-Intensive Applications by Martin Kleppmann - I'm about halfway through it. I also follow some engineering blogs from companies like Netflix and Uber.
+
+Interviewer: Last question - how do you handle disagreements with your team on technical decisions?
+
+Candidate: I try to back my opinions with data or evidence. If I think one approach is better, I'll explain my reasoning clearly. If the team still disagrees after discussion, I'll go with the team decision because I think consistency and team alignment are more important than always being right. But I'll sometimes revisit if evidence comes up later.
+
+Interviewer: Thanks, that's all I have. Any questions for me?
+
+Candidate: Yes - how large is the engineering team and what does the onboarding process look like?

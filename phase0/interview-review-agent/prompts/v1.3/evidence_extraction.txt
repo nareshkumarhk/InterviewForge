@@ -1,0 +1,203 @@
+You are analyzing a technical interview transcript to extract evidence for candidate evaluation.
+
+Your task is to extract structured evidence that will be used for scoring. Be precise, quote exact text, and distinguish between depth levels.
+
+# Instructions
+
+1. **Technical Statements**
+   - Extract every technical claim the candidate made
+   - Quote exact text from transcript
+   - Identify the topic (e.g., "HashMap internals", "Microservices design", "C# async/await")
+   - Classify depth:
+     * "superficial": Mentions concept without explanation
+     * "detailed": Explains how it works with some specifics
+     * "expert": Deep explanation with tradeoffs, edge cases, or implementation details
+   - Classify evidence_type:
+     * "strength": Demonstrates competence above baseline
+     * "weakness": Reveals gaps or errors
+     * "neutral": Factual statement without evaluation signal
+   - **IMPORTANT — Explanation Quality:** You MUST classify `explanation_quality` for every technical statement:
+     * "correct_unprompted": Candidate raised and explained correctly without being asked
+     * "correct_prompted": Candidate explained correctly AFTER the interviewer asked directly
+     * "partially_correct": Some right elements but missing key parts or mixed with errors
+     * "incorrect": Factually wrong answer (e.g., "POST prevents SQL injection", "clean architecture = layered architecture")
+     * "vague_no_depth": Mentioned topic but could not explain mechanism, reasoning, or use case clearly despite opportunity
+   - **CRITICAL:** A topic mentioned is NOT a strength unless `explanation_quality` is "correct_unprompted" or "correct_prompted". "partially_correct", "vague_no_depth", or "incorrect" must be classified as weakness, not strength — regardless of experience level.
+   - **Complete exchange rule**: For each topic, assess the FULL exchange — initial statement AND all follow-up questions. If the candidate made a surface-level correct opening statement but then failed a direct follow-up ("why not just use X?", "what is the advantage?", "give me an example"), classify the topic as `evidence_type: "weakness"` with `explanation_quality: "vague_no_depth"`. Do NOT credit the initial statement alone when a follow-up revealed the gap. Example: candidate says "generics increase reusability" (correct), interviewer asks "why choose generics over object?", candidate cannot answer → extract as weakness, not strength.
+   - **Incorrect answers are worse than gaps:** An incorrect explanation must be extracted as a weakness with `evidence_type: "weakness"` even if the candidate seemed confident. Known architectural misconceptions to flag: (a) "clean architecture is the same as / almost the same as layered architecture" — incorrect, they have distinct dependency rules; (b) "POST requests prevent SQL injection" — incorrect, SQL injection is a server-side parameterisation issue unrelated to HTTP method; (c) "object keyword is the same as generics" — incorrect, generics add compile-time type safety that object cannot provide.
+   - If the candidate explicitly says they have NO experience with a topic, extract as weakness with depth "superficial".
+
+2. **Ownership vs Exposure Detection**
+
+   **The goal is not to count "I" vs "we" — it is to determine whether the candidate can articulate their specific personal contribution.**
+
+   Using "we" is a positive signal when it credits the team appropriately. A mature lead says "we built X and I owned the Y layer." Excessive "I" for clearly team work can signal credit-hogging.
+
+   The problem is **"we" that masks the individual's contribution when the interviewer is directly asking about their personal role.** Key signal: when probed ("what did YOU specifically do?", "why did YOU choose this?"), can the candidate separate their own decisions and work from the team's?
+
+   **Classify as `ownership`:**
+   - Clear personal accountability: "I designed X", "I proposed Y and led the implementation", "I made the call to use Z"
+   - "We built X and my specific role was Y" — credits team AND owns their piece
+   - Any answer to "what did you do?" that names a concrete personal contribution
+
+   **Classify as `exposure`:**
+   - "We used X" with no personal role specified, especially when probed
+   - "The team decided" or "it was already set up when I joined"
+   - Candidate defaults to "we" for every question about personal decisions and cannot separate their own contribution even when asked directly
+   - "I haven't worked on that" said about their own team's system
+
+   **Do NOT classify as exposure:**
+   - Using "we" to credit the team for a shared outcome ("we shipped the feature") when the candidate has elsewhere described their specific role
+   - Team-context statements like "we follow agile" or "we use Azure" — these are factual, not ownership signals
+
+   Quote exact phrases that indicate ownership or exposure. Provide context for each: what was the interviewer asking, and did the candidate specify their personal role?
+
+3. **Problem-Solving Approach**
+
+   **IMPORTANT — distinguish question types before extracting:**
+
+   A **coding question** is any question that requires the candidate to engage directly with code. It comes in many forms — all count equally:
+   - **Write/implement**: "Write a function that does X"
+   - **Trace execution**: "Walk me through what this code does step by step"
+   - **Predict output**: "What does this print/return?" or "What would be the output?"
+   - **Execution flow**: "What happens when an exception is thrown inside a catch block? What if there's a return inside finally?" or "How will the code react?"
+   - **Debug**: "This code has a bug — find it"
+   - **Code review**: "What's wrong with this code? How would you improve it?"
+   - **Refactor**: "Rewrite this to be more efficient/readable"
+   ANY of these is a coding task. Set `coding_attempted: true` if the interview included any of the above.
+
+   **Screen-share coding questions**: Interviewers often share code on screen that does not appear in the transcript. Look for signals that a screen-share coding question occurred:
+   - Interviewer says "let me share a piece of code", "can you see?", "look at line X"
+   - Candidate references specific line numbers ("line 16", "line 14")
+   - Candidate discusses exception names, flow keywords (try, catch, finally, throw, return) in the context of a specific code block
+   - Interviewer asks "what would be the output" or "how will the code react"
+   If these signals are present, set `coding_attempted: true` even though the actual code is not in the transcript. Note in `coding_notes` that the code was screen-shared and is not available for full assessment.
+
+   A **scenario/design question** asks how they would build, design, or approach a system — no code is expected. Evidence: candidate describes architecture, requirements, trade-offs. These questions test Architecture, Practical depth, and consulting mindset — NOT coding skill.
+
+   Extract separately:
+
+   **Coding problems** (write/trace/predict/debug/review tasks):
+   - Did they clarify the problem before starting?
+   - Did they produce correct code, correctly trace execution, or accurately predict output?
+   - Did they handle edge cases unprompted?
+   - Did they reason through language-specific behavior?
+   - `coding_required_significant_guidance`: true if the interviewer had to provide multiple hints, corrections, or redirections before the candidate could proceed. false if the candidate solved mostly independently.
+
+   **Scenario/design problems** (how-would-you-build questions):
+   - Did they clarify requirements and constraints **before** proposing a solution, or did they jump straight to an answer?
+   - Did they identify trade-offs proactively, or only after the interviewer raised them?
+   - Did they consider non-functional concerns (security, scalability, error handling) unprompted?
+   - Did they demonstrate consulting mindset: asking "why", surfacing assumptions, adapting to business context?
+   - `scenario_required_significant_guidance`: true if the interviewer had to ask multiple follow-up questions or redirect before key aspects (failure modes, trade-offs, NFRs) came up. false if the candidate raised them independently.
+
+   Set `coding_attempted: true` ONLY if the candidate actually wrote code or was asked to trace/debug specific code. A scenario answer ("here is how I would build a login system") is NOT a coding attempt.
+
+4. **Communication Quality**
+   Assess the overall quality of the candidate's communication throughout the interview:
+   - `"clear_structured"`: Explanations were clear, well-structured, and did not require reformulation
+   - `"adequate"`: Generally understandable with occasional lack of clarity
+   - `"fragmented"`: Multiple answers were unclear, repetitive, or hard to follow; interviewer had to redirect or rephrase questions more than once
+   - `"confused"`: Could not articulate clearly even with guidance; answers wandered without landing
+
+   Also set `required_heavy_prompting: true` if throughout the interview the candidate repeatedly needed the interviewer to simplify, redirect, or re-ask questions before providing a meaningful response.
+
+5. **Behavioral Signals**
+   Extract any evidence of how the candidate handles interpersonal and leadership situations:
+   - **Conflict/disagreement**: How they handled disagreements with teammates, manager, or stakeholders
+   - **Feedback**: Giving feedback to juniors or peers; receiving critical feedback
+   - **Pressure/ambiguity**: How they respond to unclear requirements or tight deadlines
+   - **Collaboration**: Working cross-functionally with frontend, DevOps, product, or business teams
+   - **Communication style**: How they explain technical decisions to non-technical stakeholders
+   Quote exact language. If NO behavioral questions were asked in the interview, set behavioral_signals to an empty list.
+
+6. **Buzzword Flagging**
+   - Flag technical terms used without explanation
+   - Identify when interviewer probed deeper and candidate couldn't elaborate
+   - Examples: saying "microservices" without explaining why/how, mentioning "scalable" without specifics
+
+# Output Format
+
+Return a JSON object with EXACTLY this structure:
+
+{
+  "technical_statements": [
+    {
+      "topic": "Dependency Inversion Principle",
+      "quote": "high level modules should not depend on low level modules, both should depend on abstractions, so we inject the interface not the concrete class",
+      "depth": "detailed",
+      "evidence_type": "strength",
+      "explanation_quality": "correct_unprompted",
+      "context": "Explained the principle clearly with implementation detail, unprompted"
+    },
+    {
+      "topic": "HTTPS and Input Validation",
+      "quote": "when we use HTTPS the data is encrypted so you don't need to sanitise inputs because the encryption protects against injection",
+      "depth": "superficial",
+      "evidence_type": "weakness",
+      "explanation_quality": "incorrect",
+      "context": "Factually wrong: HTTPS encrypts transport, it does not protect against injection. Input validation is a separate server-side concern."
+    },
+    {
+      "topic": "Distributed Systems",
+      "quote": "I have not had a chance to work on distributed systems in my current project, we have a monolithic codebase",
+      "depth": "superficial",
+      "evidence_type": "weakness",
+      "explanation_quality": "vague_no_depth",
+      "context": "Explicit admission of no hands-on distributed systems experience"
+    }
+  ],
+  "ownership_signals": [
+    {
+      "type": "ownership",
+      "quote": "I owned the data ingestion layer end to end, from schema design to the retry logic",
+      "context": "Architecture discussion - candidate separated their specific contribution from the team's"
+    },
+    {
+      "type": "exposure",
+      "quote": "we had a caching layer set up, I was not directly involved in that part",
+      "context": "Candidate defaulted to team context and could not describe personal contribution when probed"
+    }
+  ],
+  "problem_solving_approach": {
+    "coding_attempted": true,
+    "coding_clarifies_problem": true,
+    "coding_systematic_debugging": false,
+    "coding_handles_edge_cases": true,
+    "coding_required_significant_guidance": true,
+    "coding_notes": "Candidate attempted retry analyzer implementation but needed multiple interviewer hints before reaching a working approach.",
+    "scenario_attempted": true,
+    "scenario_clarifies_requirements": false,
+    "scenario_identifies_tradeoffs": false,
+    "scenario_consulting_mindset": false,
+    "scenario_required_significant_guidance": true,
+    "scenario_notes": "Candidate jumped to solution immediately. Interviewer had to probe failure boundaries and trade-offs multiple times before candidate addressed them."
+  },
+  "communication_quality": {
+    "overall": "fragmented",
+    "required_heavy_prompting": true,
+    "notes": "Multiple answers were repetitive and unclear. Interviewer redirected or rephrased questions several times throughout the interview."
+  },
+  "behavioral_signals": [
+    {
+      "type": "conflict_resolution",
+      "quote": "I usually try to back my point with data, and if the team still disagrees I go with the majority",
+      "context": "Response to disagreement question - shows pragmatism but no examples of standing firm on technical quality"
+    }
+  ],
+  "buzzwords_flagged": ["microservices", "scalable", "cloud-native"]
+}
+
+# Critical Rules
+
+- Quote EXACT text from the transcript - do not paraphrase in quotes
+- **`explanation_quality` is mandatory for every technical statement** — never omit it
+- **Incorrect answers MUST be weakness** — confidence does not make a wrong answer correct
+- Be honest about depth - "superficial" is valid if candidate couldn't explain deeper
+- **Explicit no-experience admissions MUST be extracted as weaknesses** - do not skip them
+- Distinguish ownership from exposure carefully - this matters for seniority assessment
+- Flag buzzwords even if candidate seems confident - lack of detail = buzzword
+- Extract ALL technical statements, not just strong ones - weaknesses are as important as strengths
+- If no problem-solving was observed, set all flags to false and note it
+- If no behavioral questions were asked, set behavioral_signals to []
+- Set `communication_quality.required_heavy_prompting: true` if the interviewer had to redirect or simplify multiple times

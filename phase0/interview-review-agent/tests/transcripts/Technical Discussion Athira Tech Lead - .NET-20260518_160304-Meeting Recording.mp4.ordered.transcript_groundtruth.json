@@ -1,0 +1,83 @@
+{
+  "candidate_name": "Athira KR",
+  "role": "dotnet_lead",
+  "interview_date": "2026-05-18",
+  "interviewer": "Naresh Kumar",
+
+  "expected_decision": "Reject",
+  "expected_calibration": "8 years experience with C#, Web API, MVC, Angular, SQL Server, some Azure. Basic familiarity with JWT, validation, and API-based flow. However, core .NET fundamentals were weak: generics explanation vague and repetitive, type safety reasoning absent, GET/POST security concepts factually incorrect (candidate associated POST with SQL injection prevention). Login/API flow was surface-level with no depth on request lifecycle, auth flow, token security, or session handling. Communication fragmented throughout with heavy interviewer guidance required. Technical maturity significantly below expectations for a Senior/Lead .NET role. Strong Reject.",
+
+  "expected_dimension_ranges": {
+    "Fundamentals":               { "min": 1.5, "max": 2.5 },
+    "Coding":                     { "min": 0.5, "max": 1.0 },
+    "Architecture":               { "min": 1.0, "max": 2.0 },
+    "Ownership":                  { "min": 2.0, "max": 3.0 },
+    "Communication & Behavioral": { "min": 1.5, "max": 2.5 },
+    "Practical":                  { "min": 1.5, "max": 2.5 },
+    "Learning":                   { "min": 2.0, "max": 3.0 }
+  },
+
+  "critical_issues": [
+    {
+      "id": "generics_explanation_factually_weak",
+      "description": "Generics discussion exposed major conceptual gaps: could not explain advantages over using 'object', vague on type safety reasoning, examples were unclear and repetitive. For an 8-year .NET engineer these are expected fundamentals. This is a weakness, not a strength.",
+      "quote_patterns": ["generic", "parameter P", "generics", "object"],
+      "topic_patterns": ["Generics", ".NET Generics"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Fundamentals",
+      "severity": "critical",
+      "must_catch": true
+    },
+    {
+      "id": "post_sql_injection_factual_error",
+      "description": "Candidate incorrectly associated POST request usage with prevention of SQL injection. Said 'It will not have this SQL ingestion type of issues' — associating POST method with SQL injection prevention. GET vs POST security discussion showed factually incorrect understanding. This is a conceptual error, not just a gap — it is a wrong answer.",
+      "quote_patterns": ["SQL ingestion", "ingestion", "SQL injection", "POST"],
+      "topic_patterns": ["HTTP Methods", "API Security", "SQL Injection", "Security"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Fundamentals",
+      "severity": "critical",
+      "must_catch": true
+    },
+    {
+      "id": "api_auth_flow_surface_level",
+      "description": "Login/API implementation discussion was surface-level: login page → API call → JWT → DB validation, with no depth on request lifecycle, authentication flow, token security, session handling, or API communication standards. Missing backend engineering depth expected from a senior engineer.",
+      "quote_patterns": ["login", "JWT", "API", "token"],
+      "topic_patterns": ["Authentication", "API Design", "Login Flow"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "major",
+      "must_catch": true
+    },
+    {
+      "id": "heavy_interviewer_prompting",
+      "description": "Communication fragmented throughout the interview. Answers were unclear and repetitive, requiring heavy interviewer guidance before reaching any coherent response. Candidate often started with broad statements but could not explain implementation details. Not lead-level communication.",
+      "quote_patterns": [],
+      "topic_patterns": ["Communication"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Communication & Behavioral",
+      "severity": "major",
+      "must_catch": true
+    }
+  ],
+
+  "known_strengths": [
+    {
+      "id": "basic_jwt_awareness",
+      "description": "Basic familiarity with JWT authentication and client-side/regex validation. Practical project exposure in enterprise application development.",
+      "quote_patterns": ["JWT", "token", "authentication", "validation"],
+      "topic_patterns": ["JWT", "Authentication", "Validation"],
+      "expected_evidence_type": "strength",
+      "dimension": "Fundamentals"
+    }
+  ],
+
+  "scoring_notes": {
+    "fundamentals_model_risk": "Model scored Fundamentals 4.0 by detecting topic keywords (generics, JWT, SQL injection) without distinguishing correct explanations from incorrect ones. The POST/SQL injection answer is factually WRONG — that must lower Fundamentals, not be ignored. Score should be 1.5–2.5.",
+    "architecture_model_risk": "Model scored Architecture 2.0 which is at the high end. Login flow was a scenario question answered at surface level with no NFRs, no auth architecture, no token lifecycle — should be 1.0–2.0.",
+    "practical_model_risk": "Model scored Practical 3.0. API/security discussions were weak and conceptually incorrect — Practical should be 1.5–2.5.",
+    "communication_model_risk": "Model scored Communication 3.0. Fragmented communication with heavy prompting required throughout — should be 1.5–2.5.",
+    "key_pattern": "Model treats topic mention as competence demonstrated. It needs to evaluate whether the explanation was correct, complete, and unprompted. A wrong answer on security is worse than no answer."
+  },
+
+  "notes": "20-min Technical Discussion (not a full L1). No coding tasks attempted — Coding 0.5 is correct. Decision (Reject) is correct. The inflation is entirely in score quality assessment: model gave 4.0 Fundamentals despite a factual error on security and vague generics explanation."
+}

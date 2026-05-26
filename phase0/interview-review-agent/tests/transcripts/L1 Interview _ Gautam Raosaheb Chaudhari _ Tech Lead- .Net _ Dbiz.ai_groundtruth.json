@@ -1,0 +1,83 @@
+{
+  "candidate_name": "Gautam Raosaheb Chaudhari",
+  "role": "dotnet_lead",
+  "interview_date": "2026-05-15",
+  "interviewer": "Jayantha Liyanage",
+
+  "expected_decision": "Reject",
+  "expected_calibration": "20+ years overall backend experience with .NET Core, C#, MSSQL, Azure, CI/CD and API development. Demonstrated basic conceptual familiarity with SOLID principles, DI, layered architecture, and several design pattern names. However, explanations were generic, incomplete, and confused — factory pattern weak, repository pattern unclear, clean architecture equated with layered architecture (factual error). Microservices admitted as no practical experience. Communication fragmented throughout with repeated interviewer redirects and reframing required. Technical depth significantly below expectations for a Tech Lead role. Strong Reject.",
+
+  "expected_dimension_ranges": {
+    "Fundamentals":               { "min": 2.0, "max": 3.0 },
+    "Coding":                     { "min": 0.5, "max": 1.5 },
+    "Architecture":               { "min": 1.0, "max": 2.0 },
+    "Ownership":                  { "min": 2.0, "max": 3.0 },
+    "Communication & Behavioral": { "min": 1.5, "max": 2.5 },
+    "Practical":                  { "min": 1.5, "max": 2.5 },
+    "Learning":                   { "min": 2.0, "max": 3.0 }
+  },
+
+  "critical_issues": [
+    {
+      "id": "clean_arch_equals_layered_arch",
+      "description": "Candidate equated Clean Architecture with Layered Architecture — a factual error. Clean Architecture has specific inward-dependency rules (domain at center, no infrastructure leaking inward). Treating them as equivalent exposes lack of architectural depth.",
+      "quote_patterns": ["clean architecture", "layered", "Clean Architecture"],
+      "topic_patterns": ["Clean Architecture", "Architecture", "Layered Architecture"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "critical",
+      "must_catch": true
+    },
+    {
+      "id": "design_pattern_explanations_generic_confused",
+      "description": "Mentioned multiple patterns (Strategy, Factory, Repository, CQRS, Singleton) but explanations were generic, incomplete, and lacked real-world use cases. Factory pattern explanation was weak/confused; repository pattern understanding was unclear. Template, Mediator, Adapter, Facade were unknown or not recalled.",
+      "quote_patterns": ["factory", "repository", "strategy", "singleton", "CQRS"],
+      "topic_patterns": ["Design Patterns", "Factory Pattern", "Repository Pattern"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Fundamentals",
+      "severity": "major",
+      "must_catch": true
+    },
+    {
+      "id": "no_practical_microservices",
+      "description": "Candidate explicitly admitted no practical microservices experience. Transaction and distributed-system challenges could not be explained. System decomposition understanding remained surface-level and theoretical.",
+      "quote_patterns": ["microservices", "not having", "no experience"],
+      "topic_patterns": ["Microservices", "Distributed Systems"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "critical",
+      "must_catch": true
+    },
+    {
+      "id": "communication_fragmented_heavy_prompting",
+      "description": "Responses were fragmented, difficult to follow, and repetitive throughout. Interviewer had to repeatedly redirect, simplify, and reframe questions. Critical concern for a Tech Lead role where clear technical communication, mentoring, and architecture discussions are daily expectations.",
+      "quote_patterns": [],
+      "topic_patterns": ["Communication"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Communication & Behavioral",
+      "severity": "major",
+      "must_catch": true
+    }
+  ],
+
+  "known_strengths": [
+    {
+      "id": "solid_principles_basic",
+      "description": "Demonstrated basic conceptual understanding of SOLID principles and dependency injection with recognisable examples.",
+      "quote_patterns": ["single responsibility", "open closed", "dependency injection", "SOLID"],
+      "topic_patterns": ["SOLID", "Dependency Injection"],
+      "expected_evidence_type": "strength",
+      "dimension": "Fundamentals"
+    }
+  ],
+
+  "scoring_notes": {
+    "fundamentals_model_risk": "Model scored Fundamentals 4.0 because SOLID principles were named and partially explained. However, design pattern explanations (factory, repository) were confused and implementation depth was absent. Score should be 2.0–3.0. Naming a pattern ≠ understanding it.",
+    "communication_model_risk": "Model scored Communication 3.5 — too high. Fragmented, repetitive responses with heavy interviewer redirects throughout. A Tech Lead must communicate architecture decisions to juniors and stakeholders. Score should be 1.5–2.5.",
+    "architecture_model_risk": "Model scored Architecture 2.0, which is at the edge. Given clean arch ≈ layered arch error and no practical microservices, 1.0–2.0 is the right range.",
+    "practical_model_risk": "Model scored Practical 2.0 which is closer to correct, but still consider 1.5–2.5 given limited production debugging evidence.",
+    "key_pattern": "Same core failure as Athira: pattern name recognition scored as competence. Model needs to detect when explanations are vague, confused, or factually incorrect and penalise rather than reward."
+  },
+
+  "notes": "65-min L1 interview by Jayantha Liyanage (not Naresh). No coding tasks were run — Coding 0.5–1.5 range is correct. Decision (Reject) is correct. The 20 years tenure is misleading — depth did not match tenure. Calibration line should reflect this explicitly."
+}

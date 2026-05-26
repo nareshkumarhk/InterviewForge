@@ -1,0 +1,20 @@
+{
+  "actual_decision": "Borderline",
+  "actual_reasoning": "Strong fundamentals and decent coding, but architecture knowledge is exposure not ownership. Practical problem-solving is solid but not senior-level. Reading system design is encouraging but not yet demonstrated in depth.",
+  "critical_issues_to_catch": [
+    "Kafka usage is exposure not ownership - 'The team decided to use Kafka before I joined'",
+    "Cloud infrastructure is exposure only - DevOps team owns it",
+    "Architecture knowledge lacks depth - cannot explain Kafka partitioning or consumer failure handling",
+    "N+1 fix was manager-initiated, not self-identified - ownership question",
+    "System design knowledge is in-progress self-study, not yet proven in work"
+  ],
+  "expected_recommendation": "Borderline",
+  "expected_calibration": "Strong Intermediate / Junior Senior - fundamentals are good but lacks the architecture ownership and depth expected at senior level",
+  "strengths_to_identify": [
+    "HashMap explanation was detailed and accurate including Java 8 tree conversion",
+    "Sliding window coding solution was optimal O(n) with correct complexity analysis",
+    "Good edge case handling in coding problem",
+    "N+1 optimization showed solid Django ORM knowledge",
+    "Self-awareness about skill gaps and active learning (DDIA book)"
+  ]
+}

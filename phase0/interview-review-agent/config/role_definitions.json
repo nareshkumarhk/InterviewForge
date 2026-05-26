@@ -1,0 +1,197 @@
+{
+  "senior_backend": {
+    "role_title": "Senior Backend Developer",
+    "role_level": "senior",
+    "experience_years": "6-10",
+    "must_have_skills": [
+      {
+        "skill": "Python",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Production-scale async processing"
+      },
+      {
+        "skill": "Django",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "REST API development, ORM optimization"
+      },
+      {
+        "skill": "System Design",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design distributed systems from scratch"
+      }
+    ],
+    "nice_to_have": ["GraphQL", "Kubernetes", "Redis"],
+    "key_responsibilities": [
+      "Design backend services and APIs",
+      "Lead technical architecture decisions",
+      "Mentor junior and mid-level engineers",
+      "Own production systems and incident response"
+    ]
+  },
+  "intermediate_backend": {
+    "role_title": "Backend Developer",
+    "role_level": "intermediate",
+    "experience_years": "3-6",
+    "must_have_skills": [
+      {
+        "skill": "Python or Java",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "Feature development, API integration"
+      },
+      {
+        "skill": "Databases",
+        "depth": "working",
+        "importance": "critical",
+        "context": "Query optimization, schema design"
+      }
+    ],
+    "nice_to_have": ["Docker", "Redis", "Message queues"],
+    "key_responsibilities": [
+      "Build and maintain backend services",
+      "Collaborate with frontend and DevOps teams",
+      "Write and review code",
+      "Debug production issues"
+    ]
+  },
+  "junior_backend": {
+    "role_title": "Junior Backend Developer",
+    "role_level": "junior",
+    "experience_years": "0-3",
+    "must_have_skills": [
+      {
+        "skill": "Python or Java or JavaScript",
+        "depth": "working",
+        "importance": "critical",
+        "context": "Core language proficiency"
+      },
+      {
+        "skill": "Fundamentals",
+        "depth": "working",
+        "importance": "critical",
+        "context": "Data structures, algorithms, OOP"
+      }
+    ],
+    "nice_to_have": ["SQL", "REST APIs", "Git"],
+    "key_responsibilities": [
+      "Implement features under guidance",
+      "Write unit tests",
+      "Participate in code reviews",
+      "Learn and grow quickly"
+    ]
+  },
+  "senior_qa_automation": {
+    "role_title": "Senior QA Automation Engineer / QA Lead",
+    "role_level": "senior",
+    "experience_years": "8-12",
+    "must_have_skills": [
+      {
+        "skill": "Test Automation Frameworks",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Selenium, Playwright, or Cypress — design and maintain automation suites"
+      },
+      {
+        "skill": "Programming Languages",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "Java or TypeScript/JavaScript for test script development"
+      },
+      {
+        "skill": "API Testing",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "REST API testing using Postman, RestAssured, or similar"
+      },
+      {
+        "skill": "CI/CD Integration",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Integrate tests into Jenkins, GitHub Actions, or Azure DevOps pipelines"
+      },
+      {
+        "skill": "Test Strategy & Planning",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "Define test coverage, risk-based testing, test plan creation for lead role"
+      }
+    ],
+    "nice_to_have": [
+      "Performance testing (JMeter, k6)",
+      "Mobile testing (Appium, XCUITest)",
+      "BDD frameworks (Cucumber, SpecFlow)",
+      "Database testing",
+      "Security/accessibility testing"
+    ],
+    "key_responsibilities": [
+      "Design and implement automation frameworks from scratch",
+      "Lead QA team and mentor junior automation engineers",
+      "Define test strategy, coverage, and quality gates",
+      "Integrate automated tests into CI/CD pipelines",
+      "Collaborate with developers and product on shift-left testing",
+      "Report on test metrics, defect trends, and quality health",
+      "Champion quality practices across the engineering team"
+    ]
+  },
+  "dotnet_lead": {
+    "role_title": ".NET Lead / Backend Lead",
+    "role_level": "lead",
+    "experience_years": "7-12",
+    "must_have_skills": [
+      {
+        "skill": "C#",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Enterprise-grade backend development"
+      },
+      {
+        "skill": ".NET Core",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Backend services, performance optimization"
+      },
+      {
+        "skill": "RESTful APIs & Microservices",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and implement scalable service architecture"
+      },
+      {
+        "skill": "SQL Databases",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "SQL Server/PostgreSQL, query optimization"
+      },
+      {
+        "skill": "Cloud Platforms",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Azure or AWS, deployment and scaling"
+      },
+      {
+        "skill": "Authentication & Security",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "OAuth2, JWT, IdentityServer implementation"
+      }
+    ],
+    "nice_to_have": [
+      "Docker & Kubernetes",
+      "Message Queues (RabbitMQ, Kafka)",
+      "Event-driven architecture",
+      "CI/CD pipeline design"
+    ],
+    "key_responsibilities": [
+      "Design and implement backend services using .NET Core",
+      "Lead technical architecture and microservices design decisions",
+      "Optimize database performance and queries",
+      "Conduct code reviews and mentor team members",
+      "Collaborate with frontend and DevOps for seamless integration",
+      "Implement security best practices and authentication mechanisms",
+      "Drive continuous improvement and stay current with .NET ecosystem"
+    ]
+  }
+}

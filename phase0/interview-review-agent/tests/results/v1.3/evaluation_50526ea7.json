@@ -1,0 +1,365 @@
+{
+  "evaluation_id": "50526ea7",
+  "prompt_versions": {
+    "evidence_extraction": "v1.3",
+    "dimension_scoring": "v1.3",
+    "output_naresh": "v1.3",
+    "output_quick": "v1.3"
+  },
+  "transcript_file": "tests/transcripts/L1 Interview _ Gautam Raosaheb Chaudhari _ Tech Lead- .Net _ Dbiz.ai.txt",
+  "role": {
+    "role_title": ".NET Lead / Backend Lead",
+    "role_level": "lead",
+    "experience_years": "7-12",
+    "must_have_skills": [
+      {
+        "skill": "C#",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Enterprise-grade backend development"
+      },
+      {
+        "skill": ".NET Core",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Backend services, performance optimization"
+      },
+      {
+        "skill": "RESTful APIs & Microservices",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and implement scalable service architecture"
+      },
+      {
+        "skill": "SQL Databases",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "SQL Server/PostgreSQL, query optimization"
+      },
+      {
+        "skill": "Cloud Platforms",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Azure or AWS, deployment and scaling"
+      },
+      {
+        "skill": "Authentication & Security",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "OAuth2, JWT, IdentityServer implementation"
+      }
+    ],
+    "nice_to_have": [
+      "Docker & Kubernetes",
+      "Message Queues (RabbitMQ, Kafka)",
+      "Event-driven architecture",
+      "CI/CD pipeline design"
+    ],
+    "key_responsibilities": [
+      "Design and implement backend services using .NET Core",
+      "Lead technical architecture and microservices design decisions",
+      "Optimize database performance and queries",
+      "Conduct code reviews and mentor team members",
+      "Collaborate with frontend and DevOps for seamless integration",
+      "Implement security best practices and authentication mechanisms",
+      "Drive continuous improvement and stay current with .NET ecosystem"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Jayantha Liyanage",
+    "duration_minutes": 65,
+    "date": "2026-05-15"
+  },
+  "evidence": {
+    "technical_statements": [
+      {
+        "topic": "SOLID Principles",
+        "quote": "the first one is a single responsibility means that your service class should have a little responsibility.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the single responsibility principle after being prompted, but lacked depth."
+      },
+      {
+        "topic": "Open-Closed Principle",
+        "quote": "you create a separate clause for each notification, and there should be one parent interface.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the open-closed principle with a relevant example after being prompted."
+      },
+      {
+        "topic": "Dependency Injection",
+        "quote": "your interface should not be packed, means it should have at least one or two, three contracts defined.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "explanation_quality": "vague_no_depth",
+        "context": "Candidate mentioned interface segregation but could not explain it clearly."
+      },
+      {
+        "topic": "Dependency Injection Lifetimes",
+        "quote": "majorly, there are three lifetime.NET provides for us, so one is single term.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_unprompted",
+        "context": "Candidate explained the different lifetimes of dependency injection in .NET without being prompted."
+      },
+      {
+        "topic": "Strategy Pattern",
+        "quote": "we create the interface in strategy patterns and add our contracts.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the strategy pattern and its relation to SOLID principles after being prompted."
+      },
+      {
+        "topic": "Repository Pattern",
+        "quote": "we create a service class. In that service class we have our business logic and that business logic should not.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the repository pattern with a focus on separation of concerns after being prompted."
+      },
+      {
+        "topic": "Singleton Pattern",
+        "quote": "I will make the constructor private, so no one is going to create the instance of that class.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the singleton pattern implementation after being prompted."
+      },
+      {
+        "topic": "CQRS Pattern",
+        "quote": "you should have two services, separate services for getting the data and for creating the resources.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained the CQRS pattern and its purpose after being prompted."
+      },
+      {
+        "topic": "Microservices",
+        "quote": "the main disadvantage of the microservices is that we have to create a separate project, a separate database for each.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate discussed the advantages and disadvantages of microservices after being prompted."
+      },
+      {
+        "topic": "JWT Authentication",
+        "quote": "I use JWT authentication to authenticate my API.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_unprompted",
+        "context": "Candidate explained their use of JWT authentication without being prompted."
+      },
+      {
+        "topic": "REST Standards",
+        "quote": "we have to make sure that the gate should only return the resource data.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained REST principles and standards after being prompted."
+      },
+      {
+        "topic": "Entity Framework Lazy Loading",
+        "quote": "Lazy loading means suppose you have you want two tables data.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained lazy loading in Entity Framework after being prompted."
+      },
+      {
+        "topic": "Entity Framework Eager Loading",
+        "quote": "we use the include keyword.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_prompted",
+        "context": "Candidate explained eager loading in Entity Framework after being prompted."
+      },
+      {
+        "topic": "Overloading and Overriding",
+        "quote": "overloading says that we can have multiple same name methods with different parameters.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_unprompted",
+        "context": "Candidate explained method overloading and overriding without being prompted."
+      },
+      {
+        "topic": "Difference between Interfaces and Abstract Classes",
+        "quote": "interface only defines the contracts, but nowadays, after C# 8, also we can write the method in interface as well.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "explanation_quality": "correct_unprompted",
+        "context": "Candidate explained the differences between interfaces and abstract classes without being prompted."
+      },
+      {
+        "topic": "Saga Pattern",
+        "quote": "I'm going to learn this, because I think mostly using microservices.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "explanation_quality": "vague_no_depth",
+        "context": "Candidate admitted to not knowing the saga pattern well."
+      },
+      {
+        "topic": "Azure Functions",
+        "quote": "I just created one Azure function.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "explanation_quality": "vague_no_depth",
+        "context": "Candidate mentioned using Azure Functions but could not elaborate on authentication."
+      }
+    ],
+    "ownership_signals": [
+      {
+        "type": "ownership",
+        "quote": "I designed the event-driven architecture using Kafka.",
+        "context": "Candidate discussed their role in designing architecture."
+      },
+      {
+        "type": "exposure",
+        "quote": "We used microservices at my company.",
+        "context": "Candidate mentioned team usage of microservices without specifying personal contribution."
+      },
+      {
+        "type": "exposure",
+        "quote": "We created the API project and the business classes.",
+        "context": "Candidate mentioned team efforts without detailing personal contributions."
+      }
+    ],
+    "problem_solving_approach": {
+      "coding_attempted": true,
+      "coding_clarifies_problem": true,
+      "coding_systematic_debugging": false,
+      "coding_handles_edge_cases": false,
+      "coding_required_significant_guidance": false,
+      "coding_notes": "Candidate provided a clear approach to the algorithm questions but did not write code.",
+      "scenario_attempted": true,
+      "scenario_clarifies_requirements": false,
+      "scenario_identifies_tradeoffs": false,
+      "scenario_consulting_mindset": false,
+      "scenario_required_significant_guidance": true,
+      "scenario_notes": "Candidate jumped to solutions without clarifying requirements or trade-offs."
+    },
+    "communication_quality": {
+      "overall": "adequate",
+      "required_heavy_prompting": true,
+      "notes": "Candidate's explanations were generally understandable but required prompting for clarity and depth."
+    },
+    "behavioral_signals": [
+      {
+        "type": "pressure/ambiguity",
+        "quote": "one hour is not possible because we have to debug that API thoroughly.",
+        "context": "Candidate's response to a tight deadline scenario showed awareness of the need for thoroughness."
+      }
+    ],
+    "buzzwords_flagged": [
+      "microservices",
+      "CQRS",
+      "event-driven architecture",
+      "clean architecture"
+    ]
+  },
+  "scores": [
+    {
+      "name": "Fundamentals",
+      "score": 2.5,
+      "reasoning": "Candidate demonstrated some understanding of SOLID principles and design patterns but required prompting for clarity and depth. Some explanations were vague or superficial, such as the single responsibility principle and dependency injection. A factual error was noted regarding the definition of interfaces and abstract classes, which affects the score.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "you create a separate clause for each notification, and there should be one parent interface.",
+          "topic": "Open-Closed Principle"
+        },
+        {
+          "type": "weakness",
+          "quote": "the first one is a single responsibility means that your service class should have a little responsibility.",
+          "topic": "Single Responsibility Principle \u2014 vague explanation"
+        }
+      ]
+    },
+    {
+      "name": "Coding",
+      "score": 1.0,
+      "reasoning": "Candidate attempted to clarify the problem but did not write any code during the interview. While they provided a clear approach to algorithm questions, no coding tasks were executed.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Candidate provided a clear approach to the algorithm questions but did not write code.",
+          "topic": "Coding Attempt"
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "score": 2.0,
+      "reasoning": "Candidate showed basic understanding of architectural concepts but required significant guidance to articulate trade-offs and requirements. They jumped to solutions without clarifying constraints, which limits their score.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Candidate jumped to solutions without clarifying requirements or trade-offs.",
+          "topic": "Architectural Approach"
+        }
+      ]
+    },
+    {
+      "name": "Ownership",
+      "score": 2.5,
+      "reasoning": "Candidate mentioned team efforts and their role in designing an event-driven architecture but struggled to articulate specific personal contributions. They defaulted to team language without detailing their own decisions.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "We used microservices at my company.",
+          "topic": "Team Contribution"
+        }
+      ]
+    },
+    {
+      "name": "Communication & Behavioral",
+      "score": 2.5,
+      "reasoning": "Candidate's communication was adequate but required heavy prompting for clarity and depth. While they provided some structured answers, they struggled to convey their thoughts without guidance.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Candidate's explanations were generally understandable but required prompting for clarity and depth.",
+          "topic": "Communication Quality"
+        }
+      ]
+    },
+    {
+      "name": "Practical",
+      "score": 2.0,
+      "reasoning": "Candidate has some practical experience but did not provide specific examples of production debugging or incident handling. They mentioned using Azure Functions but could not elaborate on their experience.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Candidate mentioned using Azure Functions but could not elaborate on authentication.",
+          "topic": "Practical Experience"
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "score": 2.5,
+      "reasoning": "Candidate shows some willingness to learn, as evidenced by their interest in the saga pattern. However, they admitted to not knowing it well, indicating a reactive rather than proactive approach to learning.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "I'm going to learn this, because I think mostly using microservices.",
+          "topic": "Learning Interest"
+        }
+      ]
+    }
+  ],
+  "interviewer_analysis": null,
+  "decision": {
+    "recommendation": "Reject",
+    "reasoning": "Score 1.95 below threshold 4.2",
+    "weighted_score": 1.95,
+    "threshold": 4.2
+  },
+  "feedback_naresh": "# .NET Lead / Backend Lead Interview - L1_Technical\n\n**Status:** Reject\n\n## Remarks\n\nCandidate has 7 years of experience, primarily focused on .NET development and microservices. However, their technical depth and ownership in architectural decisions were lacking for a lead role.\n\n- Fundamentals: 2.5/5 - Demonstrated some understanding of SOLID principles but struggled with clarity; for example, their explanation of the Single Responsibility Principle was vague: \"your service class should have a little responsibility.\"\n- Coding: 1/5 - Did not write any code during the interview despite providing a clear approach to algorithm questions, indicating a lack of practical coding skills.\n- Architecture: 2/5 - Showed basic understanding but required significant prompting to articulate trade-offs and jumped to solutions without clarifying requirements: \"Candidate jumped to solutions without clarifying requirements or trade-offs.\"\n- Ownership: 2.5/5 - Mentioned team efforts in designing an event-driven architecture but defaulted to team language without detailing personal contributions: \"We used microservices at my company.\"\n- Practical: 2/5 - Limited practical experience; could not elaborate on using Azure Functions beyond a superficial mention: \"I just created one Azure function.\"\n- Communication & Behavioral: 2.5/5 - Communication was adequate but required heavy prompting for clarity; their explanations were generally understandable but lacked depth.\n\nMain concern: The candidate's inability to demonstrate coding skills and articulate architectural decisions indicates they are not ready for a lead role. Their responses often lacked the necessary depth and personal ownership expected at this level.\n\nCalibration: The candidate's performance aligns more with a junior to mid-level role rather than a lead position. They have exposure to relevant technologies but lack the ownership and depth required for leadership.\n\n## Interview Reliability Note\n\n**Reliability:** High\n\nThe interview covered all key areas, and the candidate had multiple opportunities to demonstrate their knowledge. However, the lack of coding execution and depth in responses provided clear signals of their limitations.\n\n## Overall Take\n\nThe candidate has some relevant experience but does not meet the expectations for a .NET Lead role. Their fundamental understanding and practical skills are insufficient for leading technical architecture and mentoring others. \n\n## One-Line Summary\n\nCandidate shows exposure but lacks the depth and ownership needed for a lead role in .NET development.",
+  "feedback_quick": "# Quick Interview Summary\n\n**Role:** .NET Lead / Backend Lead (Lead)  \n**Recommendation:** Reject  \n**Score:** 1.95/5.0  \n\n## Quick Take  \nThe candidate demonstrated a basic understanding of .NET concepts but fell short in critical areas such as coding and architecture. Their inability to write code during the interview and vague explanations of fundamental principles raise significant concerns for a lead role.\n\n## Key Points  \n- \u2717 Weak coding skills (1.0/5): Did not write any code during the interview despite clear approaches to algorithm questions.  \n- \u2717 Fundamental knowledge lacking (2.5/5): Required prompting for clarity on SOLID principles, with some factual errors noted.  \n- \u2717 Architectural understanding limited (2.0/5): Jumped to solutions without clarifying requirements or trade-offs, indicating a lack of depth.  \n- \u2717 Ownership and contribution unclear (2.5/5): Defaulted to team language without detailing personal contributions to projects.  \n\n## Next Steps  \nDo not proceed. The candidate does not meet the necessary technical and leadership criteria for the role.",
+  "processing_time_seconds": 82.23,
+  "timestamp": "2026-05-19T07:48:47.604794+00:00"
+}

@@ -1,0 +1,303 @@
+{
+  "evaluation_id": "6dcdf8bf",
+  "prompt_versions": {
+    "evidence_extraction": "v1.2",
+    "dimension_scoring": "v1.2",
+    "output_naresh": "v1.2",
+    "output_quick": "v1.2"
+  },
+  "transcript_file": "tests/transcripts/L1 Interview Manas Ranjan Jena Tech Lead- .Net Dbiz.ai-20260515_123011-Meeting Recording.mp4.ordered.transcript.txt",
+  "role": {
+    "role_title": ".NET Lead / Backend Lead",
+    "role_level": "lead",
+    "experience_years": "7-12",
+    "must_have_skills": [
+      {
+        "skill": "C#",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Enterprise-grade backend development"
+      },
+      {
+        "skill": ".NET Core",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Backend services, performance optimization"
+      },
+      {
+        "skill": "RESTful APIs & Microservices",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and implement scalable service architecture"
+      },
+      {
+        "skill": "SQL Databases",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "SQL Server/PostgreSQL, query optimization"
+      },
+      {
+        "skill": "Cloud Platforms",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Azure or AWS, deployment and scaling"
+      },
+      {
+        "skill": "Authentication & Security",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "OAuth2, JWT, IdentityServer implementation"
+      }
+    ],
+    "nice_to_have": [
+      "Docker & Kubernetes",
+      "Message Queues (RabbitMQ, Kafka)",
+      "Event-driven architecture",
+      "CI/CD pipeline design"
+    ],
+    "key_responsibilities": [
+      "Design and implement backend services using .NET Core",
+      "Lead technical architecture and microservices design decisions",
+      "Optimize database performance and queries",
+      "Conduct code reviews and mentor team members",
+      "Collaborate with frontend and DevOps for seamless integration",
+      "Implement security best practices and authentication mechanisms",
+      "Drive continuous improvement and stay current with .NET ecosystem"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Bilal",
+    "duration_minutes": 60,
+    "date": "2026-05-15"
+  },
+  "evidence": {
+    "technical_statements": [
+      {
+        "topic": ".NET Generics",
+        "quote": "Generics means when writing code, we can define methods that can take multiple types of parameters, enhancing code reusability and type safety.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained the concept of generics with a focus on reusability and type safety."
+      },
+      {
+        "topic": "Performance of Generics",
+        "quote": "Using objects requires boxing and unboxing, which consumes memory. Generics avoid this overhead, providing better performance.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Provided a clear explanation of the performance benefits of using generics over objects."
+      },
+      {
+        "topic": "Generic Constraints",
+        "quote": "We can define generic constraints in the method to restrict the types accepted, using classes or interfaces.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Described how to implement constraints in generics."
+      },
+      {
+        "topic": "Microservices",
+        "quote": "I haven't worked with microservices.",
+        "depth": "superficial",
+        "evidence_type": "weakness",
+        "context": "Explicit admission of no hands-on microservices experience."
+      },
+      {
+        "topic": "Client-side Validation",
+        "quote": "We would implement client-side validation using JavaScript to check for password strength, ensuring it meets criteria like length and character variety.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained the approach for client-side validation effectively."
+      },
+      {
+        "topic": "Server-side Validation",
+        "quote": "The model would validate incoming data from the front end, ensuring it meets the required criteria before processing.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Described server-side validation process clearly."
+      },
+      {
+        "topic": "Exception Handling",
+        "quote": "We have custom exception classes to handle errors at runtime, which we manage in our middleware.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained the use of custom exceptions in middleware."
+      },
+      {
+        "topic": "Performance Monitoring",
+        "quote": "We use CloudWatch logs to monitor execution times and CPU utilization, checking for any slow queries or performance bottlenecks.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Described the use of CloudWatch for performance monitoring."
+      },
+      {
+        "topic": "Database Optimization",
+        "quote": "We would analyze stored procedures for efficiency, ensuring proper indexing and updating statistics to optimize query performance.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Provided a clear strategy for database performance improvement."
+      },
+      {
+        "topic": "API Performance Issues",
+        "quote": "Yes, we check for inefficient queries, such as those causing N+1 problems or excessive database connections in loops.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Identified specific performance issues related to APIs."
+      },
+      {
+        "topic": "AWS Lambda",
+        "quote": "Lambda is serverless, allowing us to focus on code without managing infrastructure, and it scales automatically based on demand.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Explained the advantages of using AWS Lambda."
+      },
+      {
+        "topic": "State Management",
+        "quote": "We maintain state in the database, using master tables to track the status of items in the workflow, such as pending, approved, or rejected.",
+        "depth": "detailed",
+        "evidence_type": "strength",
+        "context": "Described how to maintain state in workflows effectively."
+      }
+    ],
+    "ownership_signals": [
+      {
+        "type": "exposure",
+        "quote": "We would design the login page for user ID and password.",
+        "context": "Describing the implementation steps for a user login portal - indicates involvement but not ownership."
+      },
+      {
+        "type": "exposure",
+        "quote": "We would analyze stored procedures for efficiency.",
+        "context": "Discussing database optimization strategies - indicates team involvement."
+      },
+      {
+        "type": "exposure",
+        "quote": "We use CloudWatch logs to monitor execution times.",
+        "context": "Describing performance monitoring practices - indicates team practices."
+      },
+      {
+        "type": "exposure",
+        "quote": "We maintain state in the database.",
+        "context": "Describing state management practices - indicates team practices."
+      }
+    ],
+    "problem_solving_approach": {
+      "coding_attempted": false,
+      "coding_clarifies_problem": false,
+      "coding_systematic_debugging": false,
+      "coding_handles_edge_cases": false,
+      "coding_notes": "No coding tasks were presented during the interview.",
+      "scenario_attempted": true,
+      "scenario_clarifies_requirements": true,
+      "scenario_identifies_tradeoffs": false,
+      "scenario_consulting_mindset": false,
+      "scenario_notes": "Clarified user login requirements but did not discuss non-functional requirements or trade-offs."
+    },
+    "buzzwords_flagged": [
+      "microservices",
+      "serverless",
+      "scalable"
+    ]
+  },
+  "scores": [
+    {
+      "name": "Fundamentals",
+      "score": 4.0,
+      "reasoning": "The candidate demonstrated a strong understanding of .NET Generics, including performance implications and constraints. They provided detailed explanations and connected concepts to practical use. However, they lacked depth in areas like microservices, which is critical for the role.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "Generics means when writing code, we can define methods that can take multiple types of parameters, enhancing code reusability and type safety.",
+          "topic": ".NET Generics"
+        },
+        {
+          "type": "weakness",
+          "quote": "I haven't worked with microservices.",
+          "topic": "Microservices"
+        }
+      ]
+    },
+    {
+      "name": "Coding",
+      "score": 1.0,
+      "reasoning": "No coding tasks were presented during the interview, and the candidate did not demonstrate any coding skills. This lack of coding evidence is critical for a lead role.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "No coding tasks were presented during the interview.",
+          "topic": "Coding"
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "score": 2.0,
+      "reasoning": "The candidate showed a basic understanding of architectural concepts but did not demonstrate the ability to evaluate trade-offs or clarify non-functional requirements. They discussed user login design but lacked depth in microservices architecture, which is essential for the role.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "Did not discuss non-functional requirements or trade-offs.",
+          "topic": "Architecture"
+        }
+      ]
+    },
+    {
+      "name": "Ownership",
+      "score": 2.0,
+      "reasoning": "The candidate described team practices and involvement but did not demonstrate ownership or initiative in their projects. Their responses indicated exposure rather than leadership or decision-making.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "We would design the login page for user ID and password.",
+          "context": "Indicates involvement but not ownership."
+        }
+      ]
+    },
+    {
+      "name": "Communication & Behavioral",
+      "score": 3.0,
+      "reasoning": "The candidate communicated technical concepts clearly and provided structured explanations. However, there were no behavioral questions asked, limiting the assessment of their interpersonal skills.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "Using objects requires boxing and unboxing, which consumes memory. Generics avoid this overhead, providing better performance.",
+          "topic": "Performance of Generics"
+        }
+      ]
+    },
+    {
+      "name": "Practical",
+      "score": 3.0,
+      "reasoning": "The candidate demonstrated solid practical experience in areas like performance monitoring and database optimization. They described specific practices but lacked hands-on examples of production-level work.",
+      "evidence": [
+        {
+          "type": "strength",
+          "quote": "We use CloudWatch logs to monitor execution times and CPU utilization.",
+          "topic": "Performance Monitoring"
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "score": 2.0,
+      "reasoning": "The candidate did not show evidence of proactive learning or exploration beyond their current knowledge. Their admission of no experience with microservices suggests a gap in their learning journey.",
+      "evidence": [
+        {
+          "type": "weakness",
+          "quote": "I haven't worked with microservices.",
+          "topic": "Learning"
+        }
+      ]
+    }
+  ],
+  "interviewer_analysis": null,
+  "decision": {
+    "recommendation": "Reject",
+    "reasoning": "Critical red flag: Coding score below minimum for engineering role",
+    "weighted_score": 2.2,
+    "threshold": 4.2
+  },
+  "feedback_naresh": "```\n# .NET Lead / Backend Lead Interview - L1_Technical\n\n**Status:** Reject\n\n## Remarks\n\nCandidate has 8 years of experience in backend development, currently working with .NET technologies. They demonstrated strong knowledge of .NET Generics but lacked critical skills in coding and microservices architecture.\n\n- Fundamentals: 4.0/5 - Strong understanding of .NET Generics, explained, \"Generics means when writing code, we can define methods that can take multiple types of parameters, enhancing code reusability and type safety.\" However, they admitted, \"I haven't worked with microservices,\" indicating a significant gap for the role.\n- Coding: 1.0/5 - No coding tasks were presented during the interview, which is a critical oversight for a lead role. This absence of coding evidence raises a major concern.\n- Architecture: 2.0/5 - Basic understanding of architectural concepts but failed to discuss non-functional requirements or trade-offs. They mentioned user login design but lacked depth in microservices architecture.\n- Ownership: 2.0/5 - Described team practices without demonstrating ownership. For example, \"We would design the login page for user ID and password,\" indicates exposure rather than leadership.\n- Practical: 3.0/5 - Solid practical experience in performance monitoring and database optimization, stating, \"We use CloudWatch logs to monitor execution times.\" However, they lacked hands-on examples of production-level work.\n- Communication & Behavioral: 3.0/5 - Communicated technical concepts clearly, such as the performance benefits of generics, but no behavioral questions were asked, limiting the assessment of interpersonal skills.\n- Learning: 2.0/5 - Did not show evidence of proactive learning, with an explicit admission of no experience with microservices indicating a gap in their learning journey.\n\nMain concern: The candidate's lack of coding evidence is a critical red flag for a lead engineering role. Their understanding of architecture is superficial, and they do not demonstrate ownership or initiative in their projects.\n\nCalibration: The candidate's performance does not match the expectations for a lead role. They have foundational knowledge but lack the depth and ownership required for this position.\n\n## Interview Reliability Note\n\n**Reliability:** Medium\n\nThe interview lacked coding tasks, which are essential for assessing a lead candidate's technical abilities. While some technical concepts were discussed, the absence of practical coding evidence significantly weakens the reliability of the assessment.\n\n## Overall Take\n\nThe candidate has a solid grasp of some technical fundamentals but fails to meet the critical requirements for coding and architectural depth expected at the lead level. Their lack of ownership and proactive learning further diminishes their suitability for the role.\n\n## One-Line Summary\n\nStrong fundamentals but critical gaps in coding and ownership make the candidate unsuitable for a lead position.\n```",
+  "feedback_quick": "```\n# Quick Interview Summary\n\n**Role:** .NET Lead / Backend Lead (Lead)  \n**Recommendation:** Reject  \n**Score:** 2.2/5.0  \n\n## Quick Take  \nThe candidate has a solid understanding of .NET Generics but lacks critical coding skills and experience with microservices, which are essential for this lead role. Their overall performance indicates they are not yet ready for the responsibilities required.\n\n## Key Points  \n- \u2713 Strong fundamentals in .NET Generics (4.0/5): Explained concepts clearly and connected them to practical use.  \n- \u2717 No coding skills demonstrated (1.0/5): No coding tasks were presented during the interview, raising a significant concern.  \n- \u2717 Limited architectural understanding (2.0/5): Lacked depth in discussing non-functional requirements and trade-offs.  \n- \u2717 Insufficient ownership experience (2.0/5): Described team involvement but did not demonstrate leadership or initiative in projects.  \n- \u2713 Good communication skills (3.0/5): Articulated technical concepts clearly and structured responses well.  \n- \u2717 Lack of proactive learning (2.0/5): Admitted to not having worked with microservices, indicating a gap in their learning journey.  \n\n## Next Steps  \nDo not proceed. The critical lack of coding skills is a significant red flag for this engineering role.\n```",
+  "processing_time_seconds": 85.37,
+  "timestamp": "2026-05-18T05:33:41.222886+00:00"
+}

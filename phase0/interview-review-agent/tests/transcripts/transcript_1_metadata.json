@@ -1,0 +1,40 @@
+{
+  "role": {
+    "role_title": "Senior Backend Developer",
+    "role_level": "senior",
+    "experience_years": "6-10",
+    "must_have_skills": [
+      {
+        "skill": "Python",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Production-scale async processing and Django-based API development"
+      },
+      {
+        "skill": "System Design",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Design and own distributed systems end-to-end"
+      },
+      {
+        "skill": "Databases",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Query optimization, schema design, ORM usage"
+      }
+    ],
+    "nice_to_have": ["Kafka", "Redis", "AWS", "Kubernetes"],
+    "key_responsibilities": [
+      "Design backend services and APIs",
+      "Lead technical architecture decisions",
+      "Mentor junior and mid-level engineers",
+      "Own production systems and incident response"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Bilal",
+    "duration_minutes": 50,
+    "date": "2025-05-15"
+  }
+}

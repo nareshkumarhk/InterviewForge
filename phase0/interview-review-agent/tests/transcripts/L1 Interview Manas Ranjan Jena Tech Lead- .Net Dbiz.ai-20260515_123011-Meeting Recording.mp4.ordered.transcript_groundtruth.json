@@ -1,0 +1,85 @@
+{
+  "candidate_name": "Manas Ranjan Jena",
+  "role": "dotnet_lead",
+  "interview_date": "2026-05-15",
+  "interviewer": "Naresh Kumar",
+
+  "expected_decision": "Reject",
+  "expected_calibration": "Mid-level .NET developer (4-5 year depth despite 8 years tenure). Not lead-ready: no microservices, no architectural ownership, weak code execution reasoning.",
+
+  "expected_dimension_ranges": {
+    "Fundamentals":              { "min": 2.0, "max": 4.0 },
+    "Coding":                    { "min": 0.5, "max": 2.0 },
+    "Architecture":              { "min": 0.5, "max": 1.5 },
+    "Ownership":                 { "min": 1.5, "max": 3.0 },
+    "Communication & Behavioral":{ "min": 2.0, "max": 3.5 },
+    "Practical":                 { "min": 2.0, "max": 3.5 },
+    "Learning":                  { "min": 1.5, "max": 3.0 }
+  },
+
+  "critical_issues": [
+    {
+      "id": "no_microservices",
+      "description": "Candidate explicitly admitted zero hands-on microservices experience",
+      "quote_patterns": ["will not work the microservices", "haven't worked with microservices", "no microservices"],
+      "topic_patterns": ["microservices", "Microservices"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "critical",
+      "must_catch": true
+    },
+    {
+      "id": "no_personal_contribution",
+      "description": "Candidate cannot articulate their specific personal contribution even when directly probed. Uses 'we' for every answer including personal decisions — not because they credit the team, but because they cannot separate their own role.",
+      "quote_patterns": ["we are mostly doing", "we have designed"],
+      "topic_patterns": [],
+      "expected_ownership_type": "exposure",
+      "dimension": "Ownership",
+      "severity": "major",
+      "must_catch": true
+    },
+    {
+      "id": "code_trace_weak",
+      "description": "Code execution trace question (try/catch/finally semantics) answered incorrectly or with confusion",
+      "quote_patterns": ["tribal block", "final plug", "divide by zero subscription", "finally"],
+      "topic_patterns": ["Exception Handling", "exception", "coding"],
+      "check_flag": "coding_systematic_debugging",
+      "expected_flag_value": false,
+      "dimension": "Coding",
+      "severity": "major",
+      "must_catch": true
+    },
+    {
+      "id": "no_architectural_tradeoffs",
+      "description": "Login scenario designed with no trade-offs, no non-functional concerns, no requirements clarification",
+      "quote_patterns": [],
+      "topic_patterns": ["Login", "Architecture", "login"],
+      "check_flag": "scenario_identifies_tradeoffs",
+      "expected_flag_value": false,
+      "dimension": "Architecture",
+      "severity": "major",
+      "must_catch": true
+    }
+  ],
+
+  "known_strengths": [
+    {
+      "id": "generics_basics",
+      "description": "Understands .NET Generics benefits: reusability, type safety, avoids boxing/unboxing",
+      "quote_patterns": ["reusability", "type safety", "boxing", "generics"],
+      "topic_patterns": ["Generics", ".NET Generics"],
+      "expected_evidence_type": "strength",
+      "dimension": "Fundamentals"
+    },
+    {
+      "id": "db_optimization",
+      "description": "Has practical experience with DB performance monitoring and query optimization",
+      "quote_patterns": ["execution time", "stored procedure", "hot fix", "dashboard"],
+      "topic_patterns": ["Database", "Performance", "Optimization"],
+      "expected_evidence_type": "strength",
+      "dimension": "Practical"
+    }
+  ],
+
+  "notes": "Interview covered 36 minutes. Code was shared via screen-share (not in transcript). Behavioral questions were not asked — Communication & Behavioral score should be capped at 3.5."
+}

@@ -1,0 +1,61 @@
+{
+  "role": {
+    "role_title": "Senior QA Automation Engineer / QA Lead",
+    "role_level": "senior",
+    "experience_years": "8-12",
+    "must_have_skills": [
+      {
+        "skill": "Test Automation Frameworks",
+        "depth": "expert",
+        "importance": "critical",
+        "context": "Selenium, Playwright, or Cypress — design and maintain automation suites"
+      },
+      {
+        "skill": "Programming Languages",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "Java or TypeScript/JavaScript for test script development"
+      },
+      {
+        "skill": "API Testing",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "REST API testing using Postman, RestAssured, or similar"
+      },
+      {
+        "skill": "CI/CD Integration",
+        "depth": "proficient",
+        "importance": "important",
+        "context": "Integrate tests into Jenkins, GitHub Actions, or Azure DevOps pipelines"
+      },
+      {
+        "skill": "Test Strategy & Planning",
+        "depth": "proficient",
+        "importance": "critical",
+        "context": "Define test coverage, risk-based testing, test plan creation for lead role"
+      }
+    ],
+    "nice_to_have": [
+      "Performance testing (JMeter, k6)",
+      "Mobile testing (Appium)",
+      "BDD frameworks (Cucumber, SpecFlow)",
+      "Database testing",
+      "Security/accessibility testing"
+    ],
+    "key_responsibilities": [
+      "Design and implement automation frameworks from scratch",
+      "Lead QA team and mentor junior automation engineers",
+      "Define test strategy, coverage, and quality gates",
+      "Integrate automated tests into CI/CD pipelines",
+      "Collaborate with developers and product on shift-left testing",
+      "Report on test metrics, defect trends, and quality health",
+      "Champion quality practices across the engineering team"
+    ]
+  },
+  "interview": {
+    "round_type": "L1_Technical",
+    "interviewer": "Kavya K S",
+    "duration_minutes": 48,
+    "date": "2026-05-15"
+  }
+}

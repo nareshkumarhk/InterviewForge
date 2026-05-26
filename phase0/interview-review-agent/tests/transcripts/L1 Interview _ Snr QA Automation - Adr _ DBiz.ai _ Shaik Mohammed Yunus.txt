@@ -1,0 +1,825 @@
+L1 Interview  Snr QA Automation - Adr  DBiz.ai  Shaik Mohammed Yunus-20260515_112819-Meeting Recording
+May 15, 2026, 5:58AM
+47m 30s
+
+Shruti Raj started transcription
+
+Kavya K S   0:04
+Yeah, I think my camera still have ****. It's not coming, so...
+
+Speaker 1   0:08
+Right.
+
+Kavya K S   0:09
+Yeah, fine. Hi, Miss. How are you?
+
+Yunus   0:13
+Yeah, I'm good coming here. Thank you. So, what about you?
+
+Kavya K S   0:16
+Yeah, I'm doing good. Thank you. So, can you give me a quick interview about your experience? OK.
+
+Yunus   0:23
+Yeah, currently I have 12 years experience in QA, so currently I'm working as a QA lead. I'm handling around 8 members, so I have good experience on manual testing, automation testing, and ABA testing and database testing and all, and I worked on different web application testing web applications and mobile apps, including Android and iOS, all those.
+
+Kavya K S   0:24
+Yeah.
+B.
+I.
+Good.
+
+Yunus   0:48
+Those things, and I validated database also, and have good experience on release and build management activities like taking builds and deployments, all those things, and recently I implemented in the C 3 pipeline also in my current company, so apart from that, like, I'm working as a like my like...
+
+Kavya K S   1:00
+Please.
+
+Yunus   1:07
+And also responsibility, like I'm working as an individual contributor as well, as well as team management activities I'm doing, and like, like preparing test cases and execution, and I mean handling defects and preparing dashboards, summary reports, so all those things I'm doing in my in my current.
+company. That's all about me, yeah.
+
+Kavya K S   1:30
+So, totally, how many years of experience you have?
+
+Yunus   1:33
+So total have 12 years experience.
+
+Kavya K S   1:36
+Uh, how about in can you split into manual automation?
+
+Yunus   1:40
+Yeah, so basically like 8 years I worked in manual testing and the remaining four years I worked in automation testing. And coming to API testing, I worked around more than seven years in API testing, that too like manual. I used Postman, so we used to get some collections, we used to...
+Update that and we are your test. I used to test that APIs manually by using Postman and database also like I have more than five years experience in database in mobile app also have more than five years experience. So like that I can and apart from that like release and build deployments and Linux server activities and handling with the virtual machines.
+So all those things like I have more than eight, seven years experience in that.
+
+Kavya K S   2:26
+Yeah, fine. So the last minute, if some issues came into the environment, test environments, how we will be fixing those things? Like, it's a last minute, we know the next day's release. So how we will stop the release or how we will fix that issue?
+
+Yunus   2:44
+Okay.
+The point of view, religion moment.
+
+Kavya K S   2:50
+Mhm.
+
+Yunus   2:51
+So, basically, like, uh...
+
+Kavya K S   2:53
+Mhm.
+
+Yunus   2:54
+I will check, I mean, first of all, I will try to, I mean, analyze the, I mean, root cause. What is that root cause? Like, what is the severity of that particular issue, and what is the business impact, and what is the risk? I mean, risk if we release this build without with these issues, then what will be the impact and this? So, based on that, I will try, I will take the decision.
+
+Kavya K S   3:01
+Zero.
+OK.
+
+Yunus   3:15
+And also, like, will coordinate with developers and DevOps team to get get that issue fixed as soon as possible, and I will check the logs also, like, what is that issue? I'll check the logs, all those things I'll check. So, apart from that, like, I will have a quick call with all the team members, then we'll discuss like when we will get that fixed.
+
+Kavya K S   3:32
+Yeah.
+Ohh.
+
+Yunus   3:36
+So based on that, we'll plan the release.
+
+Kavya K S   3:41
+Okay, so when it comes for an automation testing, so you like you got it scenario or you got a requirement at the last moment and you have to do the some, so it's not a new application, just an existing application, just a maintenance. Okay, consider. So you have, but you have to update your scripts at the last moment.
+So in that case, how you will handle the scenarios?
+
+Yunus   4:02
+Let me know.
+Okay, so basically like...
+So, basically, like, in that case, I will try to, you know, analyze that impact of the application, like, you know, what is the automation script existing, like, what is the impact on existing automation scripts, and I'll prioritize the, like, test cases also based on business criticality and release timelines.
+
+Kavya K S   4:14
+Mhm.
+Thank you.
+Mhm.
+
+Yunus   4:33
+Like, like, I will try to understand the exact requirements and change what is that change, and apart from that, like, I will identify, like, what are the modules and what are the automation scripts we need to do, and I'll prioritize the critical regression scenarios also, so, like, apart from that, like...
+
+Kavya K S   4:33
+Mhm.
+
+Yunus   4:52
+how much time it will take and like all those things we need to prioritize. Then I'll update the automation scripts as soon as possible. Mainly focus is like critical business flows and impact areas and risk-based related things. So based on that, we will update the automation.
+scripts and that script should not break the existing script also.
+
+Kavya K S   5:17
+So in that case, whether, like, you know, it's already late, we don't have much time. So whether you will be forcing the developer to finish the story at the earliest or you will start along at the same time when they are moving the stories, means when they are working, like developers are working the stories, whether you will start along at the same time.
+
+Yunus   5:36
+Yes, of course. Basically, like, whenever developers are started, I mean, like, we are following experience methodologies, like, and whenever they are started, and we also like start the requirement analysis immediately, then we were preparing high-level scenarios early as soon as possible, we get requirements, and then I will try to identify the automation impact areas also.
+Then I'll try to prepare, I'll try to prepare or update the like automation suit, automation test cases, like the reusable automation, like whatever elements are there, whatever components are there, like I used to update that, we got like parallelly, we can.
+
+Kavya K S   6:13
+Ohh.
+
+Yunus   6:13
+How did that test case, CN?
+
+Kavya K S   6:15
+So, have you ever worked in mobile testing?
+
+Yunus   6:18
+Yes, I want to meet.
+
+Kavya K S   6:20
+So, how can we debug the tools? I mean, what kind of debugging tools you have used for a mobile testing?
+
+Yunus   6:27
+Yeah.
+So, basically, like we have some emulator I used, and I used to test this and that studio there, we have logcat, we have, so in that one I used to like, we have all these logs that will print there.
+
+Kavya K S   6:37
+Okay.
+OK, how will capture those logs using Locket?
+
+Yunus   6:51
+So, basically, like...
+
+Kavya K S   6:54
+Mm-hmm. So, I do it.
+
+Yunus   6:57
+Like we have, like we have servers also, like in servers also, like we have application server we have, so there we have different log files we have, so there we are like, there is some different commands we have like, something like that, and in that one we will capturing the logs.
+
+Kavya K S   7:01
+Mhm.
+The.
+Okay, so apart from that UI testing or the functional testing, what all areas you will be covering in the mobile testing?
+Yeah.
+
+Yunus   7:26
+So, basically, UI testing and functional testing, and once testing I have covered, and the networks testing I have covered.
+
+Kavya K S   7:28
+Yes.
+Yeah.
+Yeah, I I didn't I didn't get your voice. Your voice is not audibly early.
+
+Yunus   7:38
+Yeah, so apart from the functional testing and UI testing, I covered network testing and like responsive network testing and incoming like testing while.
+
+Kavya K S   7:39
+P.
+Mhm mm.
+Mm.
+
+Yunus   7:52
+like installation and installation testing and security testing also I have done.
+
+Kavya K S   7:54
+M.
+
+Yunus   7:58
+Like if you take network setting, like I used to test the application in different type of networks and without network, with network, all those things. And interrupt testing also I have done like whenever like we all get like whenever I'm using the application, suddenly you are getting some incoming calls or SMS, then what is your application behavior, all those things.
+And installation testing and uninstallation testing, like whenever we get a new APK, like we used to, like I used to test the installation process, how process is going down, like, and then I mean application update or downgrade, all those things I used to test. So apart from that, security testing, like whenever we are doing some payment method.
+I mean, payments or anything. So in that case, the data should not be stored in anywhere, like in mobile logs or server or I mean virtual machine logs. So that data should be in encrypted format, all those things. So these kind of things I have tested. So apart from these, like sometimes performance testing also I have done and the file uploading thing.
+All those things I have tested, yeah.
+
+Kavya K S   9:01
+OK, so I'll just give a scenario when you are doing a testing. OK, you found a bug in light mode, so whether this bug will be replicable in dark mode.
+
+Yunus   9:05
+OK.
+
+Kavya K S   9:15
+Okay.
+
+Yunus   9:16
+Okay.
+So, basically, that is a not necessary, like it really depends on the nature of the bug, because that that will be it depends on bug, like suppose it is a something kind of UI rendering or color of team related or visibility or some alignment.
+
+Kavya K S   9:26
+M.
+Things.
+Taj.
+Sure.
+
+Yunus   9:41
+Alignment thing or constants, so, so based on that, we can say, like...
+
+Kavya K S   9:43
+Yes.
+M.
+
+Yunus   9:48
+Yeah.
+
+Kavya K S   9:50
+OK, so what are the different types of descent patterns in Java?
+
+Yunus   9:55
+Sorry, sorry.
+
+Kavya K S   9:56
+What are the different types of design patterns in Java?
+
+Yunus   10:00
+Yeah, so basically there are...
+On.
+Like creational creational pattern and behavior pattern also we have and structural patterns also we have so that if you take a creational pattern there like design pattern there will be some different types like a singleton we have and the factory also we have and.
+
+Kavya K S   10:09
+Mhm.
+Mm.
+Mhm.
+
+Yunus   10:26
+Builder also, we have, I think so, which are the different types of patterns we Java.
+
+Kavya K S   10:31
+So what is a single tensile has means how it will be useful in our project, the framework?
+
+Yunus   10:39
+So, basically, like Singleton is nothing but we have to create only one project in an entire mission level, so if you take example like we have a web driver when we are, so for that we are creating one object like web driver, I mean suppose you can take like one test case is there, so in that one we are like...
+
+Kavya K S   10:44
+Mhm.
+Okay.
+Mm-hmm.
+
+Yunus   11:00
+I mean, we are keeping, I mean, we are created objects for explicit way, apart from that, like driver management and sometimes database connection also, like connection, database connection, defining an application like, so that that is a singleton pattern.
+
+Kavya K S   11:11
+Mmh.
+So I have a few test cases test. OK, I have one or three test. So I want to execute this test parallelly and I'm using this WebDriver as a singleton class. I will make this WebDriver as a singleton class. So how will we ensure that at a time only one instance of WebDriver is created?
+We are executing in parallel only, so we have to make sure only one instance is created. So how we will ensure that in the singleton class?
+K.
+Yeah.
+
+Yunus   11:58
+Ohh, I think.
+
+Kavya K S   12:00
+Yeah, you can think and tell me, no worries, you can think and tell me.
+
+Yunus   12:24
+So, basically, like, uh...
+
+Kavya K S   12:26
+It.
+
+Yunus   12:28
+I think we have something like thread local. We have something by using that. I think we can achieve that. I think, yeah, not exactly remember.
+
+Kavya K S   12:35
+Mhm.
+Okay.
+Okay, so can you share your screen and open in Notepad?
+
+Yunus   12:47
+Yeah.
+
+Kavya K S   12:48
+You.
+Play.
+
+Yunus   13:05
+So, unable to see my screen.
+
+Kavya K S   13:07
+No.
+Yeah, yes, I can see.
+
+Yunus   13:13
+Yeah.
+
+Kavya K S   13:13
+OK, you can open, so you know what is a retry analyzer, right?
+
+Yunus   13:16
+Bye.
+Yeah.
+
+Kavya K S   13:20
+Can you write a code for retry analysis?
+
+Yunus   13:24
+Yeah.
+
+Kavya K S   13:25
+I.
+
+Yunus   13:41
+The family is.
+Basically, like...
+
+Kavya K S   13:54
+Oh.
+Yeah.
+BS.
+And not.
+Okay.
+B.
+Yeah.
+Oh.
+So for this one, which interface or class we have to extend or implement?
+
+Yunus   16:53
+For this one, right? Actually, like we have to call retain laser class, I think, yeah, retain laser class, we have to extend, yeah.
+
+Kavya K S   16:53
+Yeah.
+Sure, is it a class or interface?
+
+Yunus   17:05
+Big time laser.
+Actually, it is a, I think, yeah, sorry, it is an interface, so I we need to implement it, yeah.
+
+Kavya K S   17:16
+So have you worked in using data providers?
+
+Yunus   17:21
+Data provider, yeah, yeah, I used a long time ago. Yeah, I remember something, yeah.
+
+Kavya K S   17:25
+Yes, why we need to use data providers?
+
+Yunus   17:30
+So, basically, for data provider data providers, like we we used, we need to enter the data values in this particular input fields, so something like username and passwords, so that we can use data providers.
+
+Kavya K S   17:44
+Yeah.
+So I like there is a scenario consider. OK, so it's like there is a site or we can consider IRCTC site where we are entering the number of passengers and their age.
+
+Yunus   17:56
+Okay.
+
+Kavya K S   18:02
+Okay, whoever traveling their passenger list and along with their age and when we play when we click on the checkout button which means where the payment button it will reach the payment button there it will display the details we entered the passenger and their age in the previous page whatever we entered there.
+it will display in the payment page. Okay, so we are automating the scenario and we have to verify the details. Whatever details we entered in the previous page is reflecting as it is in the payment page. There should not be any addition or deletion or any duplicates should happen.
+
+Yunus   18:23
+Mhm.
+
+Kavya K S   18:41
+Okay, so in this case, how you will automate this scenario?
+
+Yunus   18:47
+Okay.
+
+Kavya K S   18:48
+You can think, you can take time, and you can tell me.
+Do you want me to repeat?
+
+Yunus   19:14
+No, no, I understood, like, whatever, like, data we have, like, while this is like a passenger ticket booking process, like, we have to enter data in passenger details, so same data should be reflected in payment page, so that we need to, I mean, we need to have, I mean, so my approach is like...
+
+Kavya K S   19:21
+Mm.
+Yes.
+Mhm.
+
+Yunus   19:34
+Like, first of all, like I need to capture all the passenger details entered in first page. For example, like passenger name or age or gender, male or female, all those things. And then I would store all the information in the form, like in collections like our list or.
+
+Kavya K S   19:40
+M.
+Mhm.
+
+Yunus   19:53
+Map in that one, I will store that one, and then I'll click, I'll click on checkout button, so in that check on button, in that check on button, that payment page will come, then I'll capture all the displayed passenger details again by using a.
+Yeah, list. And then I'll compare both, both list. Like passenger, I mean, both data will compare and it will display path.
+
+Kavya K S   20:17
+How will compare? How will compare both hash maps, yeah, or list whatever you have used?
+
+Yunus   20:25
+So, like, we have, like, asset equals a session, I, I use, like, set data, like actual passengers and expected expected passengers, by using that, I compare that data, so...
+
+Kavya K S   20:36
+Can we compare 2 hashma pin and assault?
+Yeah.
+
+Yunus   20:44
+Sreenidhi.
+
+Kavya K S   20:44
+You have, you have, you have stored the values in a list or a list or a hash map. So, how will we compare these two hash maps? Can we use a SO dot equals and inside that can we compare these two hash maps?
+
+Yunus   20:51
+Yeah.
+Yeah, actually, uh, we can we can use a set that equals, or sometimes we can use, uh, like, uh...
+
+Kavya K S   21:09
+Okay.
+
+Yunus   21:11
+Unique or something unique was so was there.
+Yeah, start that equals we can use to compile, yeah, actual and expected.
+
+Kavya K S   21:27
+Ohh, that is fine. OK, then tell me, yeah, just continue.
+
+Yunus   21:29
+Aadil.
+
+Kavya K S   21:33
+Yes, please continue. We will compile.
+
+Yunus   21:34
+Ohh, yeah.
+So.
+Will compare it duplicate, I mean.
+So, basically, after that, after that, like, once we compare that one, then...
+
+Kavya K S   21:42
+Mhm.
+
+Yunus   21:48
+I mean, like, after that, if it is fine, then we are moving to next, I mean, next page, then I will try to complete the transaction. So, in that case, like, we have to ensure, like, there should not be any duplicate records, there should not be any additional records.
+
+Kavya K S   21:58
+The.
+
+Yunus   22:08
+There should not be any like missing data, so our data should be like exact, exactly should be there. Our data should be consistency, so...
+So, like this, can automate the test case.
+
+Kavya K S   22:21
+I.
+Okay, so what is observer pattern?
+
+Yunus   22:34
+So, go to back.
+
+Kavya K S   22:35
+Earlier, you said observe a pattern.
+Structure, behavior, creation - similarly, we have observant patterns.
+
+Yunus   22:43
+Yeah.
+So, basically, like, uh, this is a...
+Like one object, I mean, one object will be like performing, I mean, it will be used in different, I mean, different classes, maybe that kind of thing, so, like, it is a like a behavior design pattern, basically.
+
+Kavya K S   22:58
+Yeah.
+
+Yunus   23:12
+Ohh.
+
+Kavya K S   23:13
+So descent pattern, which should descent pattern comes on the observer?
+
+Yunus   23:19
+Sorry?
+
+Kavya K S   23:20
+Which design pattern comes under observer pattern?
+Okay, it's a call listeners.
+
+Yunus   23:31
+So, basically, like, we have a behavior, behavior design pattern, I think, yeah.
+
+Kavya K S   23:34
+Yeah, it's called...
+No, it's actually listeners. Listeners are called observers.
+
+Yunus   23:43
+Baby.
+
+Kavya K S   23:43
+OK, they are observing, listening. OK, so I just pinged a string. OK, I have dogs and cats. OK, so here I'll just...
+
+Yunus   23:46
+Yeah, Neha.
+
+Kavya K S   23:57
+I want you to write a CN or Java code. Sorry, Java code for this one. So what you have to do is all the 1st letter should be capitalized.
+
+Yunus   24:09
+Okay.
+
+Kavya K S   24:10
+And the last letter, last string itself completely capitalized. I'll show you the, so you want, I want you to make like all the 1st letters of the strings are capitalized like I, H, D&A and the last complete string, complete word is a capitalized.
+
+Yunus   24:29
+Okay, so there are two strings. One is our dogs and one is our cats. So in the dogs.
+
+Kavya K S   24:34
+No, no, there is a full strict. I have dogs and cats. That is the complete word sentence. Okay, so here you have to make it I capital, H capital, D capital, A capital, and the cats, the completely full capitalist.
+
+Yunus   24:38
+Okay.
+Understood, understood.
+
+Kavya K S   24:50
+K.
+
+Yunus   24:50
+Mhm.
+Okay, understood.
+
+Kavya K S   25:08
+You can use any online compiler, so it will be more easy.
+
+Yunus   25:12
+Sure, sure, yeah.
+
+Kavya K S   25:17
+Yes.
+
+Yunus   25:31
+Okay.
+Thank you.
+So this is a string value, right? I have a dogs and cats.
+So, not like this.
+I think I have to take this.
+
+Kavya K S   26:04
+Sorry, yeah, it will be like that first. This is your output.
+
+Yunus   26:06
+Yeah, understood.
+That.
+
+Kavya K S   34:33
+Small mystic only have chance.
+
+Yunus   34:35
+Yeah, I'm just.
+
+Kavya K S   34:38
+Oh.
+Yeah.
+Yes.
+You are splitting? Are you splitting? Can you check the skit?
+Yes, based on the space, right?
+
+Yunus   35:50
+Yeah.
+
+Kavya K S   35:52
+Are you doing in that way?
+
+Yunus   35:55
+Sorry?
+
+Kavya K S   35:56
+You are trying to split the sentence based on a speech.
+
+Yunus   36:02
+Yes, yes, correct.
+
+Kavya K S   36:03
+Can you check that? Are you using using correctly that?
+H.
+Small, small thing happens, we have a mistake.
+Can you reassure your screen? I'm not able to see your screen.
+Hello!
+
+Yunus   37:10
+Yeah, I am really sharing.
+Are you able to see my screen now?
+
+Kavya K S   37:16
+Yeah.
+
+Yunus   37:18
+Hello.
+
+Kavya K S   37:19
+No, no, I'm not able to.
+
+Yunus   37:26
+I think I'm sharing my screen.
+
+Kavya K S   37:29
+I'm not able to.
+Yeah, it's loading. Yes, I can.
+
+Yunus   37:36
+Okay.
+Neha.
+And.
+I think that.
+Yeah.
+
+Kavya K S   38:24
+Okay.
+
+Yunus   38:26
+How is the company?
+Rao.
+
+Kavya K S   38:28
+Okay, remove the last big braces.
+
+Yunus   38:31
+Actually?
+Yes.
+Hema.
+
+Kavya K S   38:51
+No can fix it.
+
+Yunus   38:53
+Yeah.
+Yeah.
+
+Kavya K S   39:48
+Yeah, right.
+
+Yunus   39:49
+So.
+Yeah.
+
+Kavya K S   39:53
+Okay, so fine. So let's move to the API part. You have worked in API, right?
+
+Yunus   39:56
+Something.
+Okay.
+Yes.
+
+Kavya K S   40:02
+So, uh, who can what is an API changing?
+
+Yunus   40:08
+So, AP training is like, basically, one AP is depending on another API is the that will be called as AP training, like, so if you take...
+The.
+I mean, like, if you take, we have some API for generating token, JWT token, something like that. So that token, once we generate the token, then it will be used in some other APIs, some check balance or some other APIs. So that we can say like APN, I mean, APA training, yeah.
+
+Kavya K S   40:25
+Mm.
+Yeah.
+M.
+Sweet.
+
+Yunus   40:41
+So, if you want, if I want to log in, if I want to log in, if you want to test the login functionality, then it should have some token, so that token API will be called first, then again this login API will be called first.
+I see.
+
+Kavya K S   41:02
+I make you to drink the water, is it?
+
+Yunus   41:06
+Yeah.
+Yeah.
+
+Kavya K S   41:07
+See.
+Okay.
+Yeah, OK, so just continue.
+
+Yunus   41:13
+Yeah, I'm fine. Yeah, we can continue, yeah.
+
+Kavya K S   41:17
+Okay, so what, like I have sent a response. Okay, I got a response, which means my request has sent from my side. It is valid, authenticated, and the body is also right. But I'm getting some error because I'm not able to access the resources there. So what kind of response code it will be?
+Play.
+
+Yunus   41:41
+Ohh.
+So, basically, like...
+I mean, like we have sent and that test. I mean, that data also created you, you're telling, right?
+
+Kavya K S   41:55
+No, no, it didn't create. It went from my side. My request board is right and it authenticated also. Okay, it's a request is right and authenticated, but I am unable to access the resources. So I'll be getting a error there response.
+
+Yunus   41:57
+Okay, listen.
+What?
+So maybe you will get something like 403 error.
+
+Kavya K S   42:15
+Okay, so what is the difference between synchronous and asynchronous API?
+
+Yunus   42:17
+Is looking.
+So basically like.
+Synchronous synchronous API is like we used to get the information quickly. I mean response quickly asynchronous like it will delay. I mean it will hit the API and we used to get the response back end response. So suppose like.
+Suppose, like, we have for initiate some transaction, then we used to get immediate response, so that will be called like in synchronous and a synchronous, like, we are initiating transaction and it will it will just display like transaction is done.
+
+Kavya K S   42:51
+Ohh.
+M.
+
+Yunus   43:06
+success response, something like that. So the process will be done back end, I mean the back end process will be running, so it will take some time and it will display the particular transaction records.
+
+Kavya K S   43:22
+So I'll go for DB also one question. So can you write a query to get the second highest salary from a table?
+
+Yunus   43:30
+Yeah.
+
+Kavya K S   43:31
+You can write in the notepad or chat anywhere, okay?
+
+Yunus   43:34
+Charging.
+
+Kavya K S   43:40
+I.
+
+Yunus   44:03
+I use some other method.
+
+Kavya K S   44:06
+You can write some universal methods, so if suppose I want a third highest salary or 4th highest salary.
+
+Yunus   44:08
+Mm.
+Yeah.
+Yeah, I'm writing my in that way only.
+Why do you suffer?
+So here I'm going to use limit one. So it will display second highest salary here, like distinct value. So it will remove duplicate salaries also.
+
+Kavya K S   44:41
+Okay, so...
+OK, so how about if I want second third or yes to salary?
+
+Yunus   44:50
+So, just I need to give, I need to change this value here.
+I mean, uh...
+I mean, two or three, I need to give, yeah, it will display, uh, hardware here.
+
+Kavya K S   45:03
+Up.
+OK, fine. So, so do you have any experience in AI tools using AI tools?
+
+Yunus   45:06
+I mean, like, second.
+Yes, actually I used a couple of AI tools to generate the test cases and like creating test plans, all those things. Yeah, I have done, I have experience here.
+
+Kavya K S   45:24
+Okay, so you have any questions for me?
+
+Yunus   45:29
+So actually I wanted to understand like what is your, I mean, what is the testing process and testing approach in your current company and what kind of work is going on, like what is the percentage of automation and what is the percentage of manual, all those things.
+
+Kavya K S   45:31
+Mhm.
+So, right now we are looking for a senior QA in any way projects where we have to we have to use all the automation tools like a playwright and we have to use the AI tools as well. Similarly to that, we have API testing that to automation as well as manual and we have manual testing also.
+
+Yunus   45:59
+It is.
+In.
+
+Kavya K S   46:06
+Same time, we have database.
+
+Yunus   46:08
+Mhm.
+
+Kavya K S   46:08
+And some, maybe we have to start working on performance. Like, it's not like everything have to do in one go. It depends on the story, like if it is a performance, we can go with performance if it is a manual automation that.
+
+Yunus   46:12
+Mm.
+Open.
+Mhm.
+
+Kavya K S   46:22
+Okay, so it's like everything we have to touch. So that's why we are looking at person who are looking for everything.
+
+Yunus   46:26
+Actually.
+OK, recently I started a playwright also by using a TypeScript and more learning purpose. I created some framework and separate layer for UI, even separate layer for API network inceptions also, so different kind of layers I have created recently.
+
+Kavya K S   46:32
+Mhm.
+Just.
+Ohh.
+Yes.
+
+Yunus   46:48
+I have done a couple of test cases as I prepared in playwright automation, so I have some experience in that as well.
+
+Kavya K S   46:55
+So, we are basically looking for Java background, because for understanding the frameworks and all, but completely we are doing working on.
+
+Yunus   47:01
+Thank you.
+Yeah, yeah, OK. So, play right, I mean, I think I think people are migrating from Macelenian to play right, it seems.
+
+Kavya K S   47:05
+Okay.
+We already migrated. We are started looking working on the playwright with type of script. We are not doing any migration process yet. It's already completed.
+
+Yunus   47:13
+Something.
+Okay, thanks.
+Okay, thanks.
+
+Kavya K S   47:22
+BS.
+
+Yunus   47:24
+Yeah, they can solve my.
+
+Kavya K S   47:24
+Okay. Thank you for your time. Have a good day. Bye bye.
+
+Yunus   47:27
+Yeah, thank you, thank you.
+
+Shruti Raj stopped transcription

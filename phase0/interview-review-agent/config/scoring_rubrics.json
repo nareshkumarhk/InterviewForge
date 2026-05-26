@@ -1,0 +1,70 @@
+{
+  "dimensions": {
+    "Fundamentals": {
+      "0-1": "Cannot explain basic concepts, incorrect definitions",
+      "2": "Surface-level understanding, memorized definitions without reasoning",
+      "3": "Solid understanding, can explain with examples",
+      "4": "Strong fundamentals, explains tradeoffs and nuances",
+      "5": "Expert-level, deep understanding, can teach concepts"
+    },
+    "Coding": {
+      "0-1": "Cannot solve basic problems, needs heavy guidance",
+      "2": "Solves with significant help, basic approach only",
+      "3": "Solves independently with decent approach",
+      "4": "Strong problem solving, optimal solutions, good debugging",
+      "5": "Exceptional, multiple approaches, elegant code, anticipates edge cases"
+    },
+    "Architecture": {
+      "0-1": "No system design understanding, cannot decompose problems",
+      "2": "Basic understanding, buzzword usage without depth",
+      "3": "Solid understanding, can design services with prompting",
+      "4": "Strong architecture skills, evaluates tradeoffs independently",
+      "5": "Expert-level architecture, considers org impact, capacity planning"
+    },
+    "Ownership": {
+      "0-1": "Task-level only, no ownership language",
+      "2": "Completes assigned work well, minimal proactivity",
+      "3": "Feature-level ownership, some initiative",
+      "4": "System-level ownership, drives technical decisions",
+      "5": "Org-level impact, strategic thinking, influences standards"
+    },
+    "Communication": {
+      "0-1": "Cannot explain technical concepts clearly",
+      "2": "Basic communication, struggles with structure",
+      "3": "Clear communication, structured responses",
+      "4": "Strong communication, teaches effectively, uses analogies",
+      "5": "Exceptional communication, influences thinking, anticipates confusion"
+    },
+    "Practical": {
+      "0-1": "No practical experience, theoretical only",
+      "2": "Limited exposure, worked on features without system context",
+      "3": "Solid practical experience, understands production environment",
+      "4": "Strong practical depth, production ownership, incident handling",
+      "5": "Expert-level practical experience, cross-system production ownership"
+    },
+    "Learning": {
+      "0-1": "Resistant to learning, bluffs through gaps",
+      "2": "Minimal learning examples, narrow focus",
+      "3": "Learns when needed, steady growth",
+      "4": "Active learner, explores beyond requirements, stays current",
+      "5": "Exceptional learning ability, thought leader, teaches industry"
+    }
+  },
+  "thresholds": {
+    "junior": 3.0,
+    "intermediate": 3.5,
+    "senior": 4.0,
+    "lead": 4.2
+  },
+  "decision_bands": {
+    "strong_hire": "weighted_score >= threshold + 0.5",
+    "hire": "weighted_score >= threshold",
+    "borderline": "weighted_score >= threshold - 0.3 AND has compensating strengths (2+ dimensions >= 4.5)",
+    "reject": "weighted_score < threshold - 0.3 OR critical red flag"
+  },
+  "red_flags": {
+    "Fundamentals < 2.0": "Applies to intermediate, senior, lead roles",
+    "Coding < 2.0": "Applies to all engineering roles",
+    "Ownership < 2.0": "Applies to senior and lead roles"
+  }
+}

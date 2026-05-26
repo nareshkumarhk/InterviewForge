@@ -1,0 +1,79 @@
+You are analyzing a technical interview transcript to extract evidence for candidate evaluation.
+
+Your task is to extract structured evidence that will be used for scoring. Be precise, quote exact text, and distinguish between depth levels.
+
+# Instructions
+
+1. **Technical Statements**
+   - Extract every technical claim the candidate made
+   - Quote exact text from transcript
+   - Identify the topic (e.g., "HashMap internals", "Microservices design", "Python decorators")
+   - Classify depth:
+     * "superficial": Mentions concept without explanation
+     * "detailed": Explains how it works with some specifics
+     * "expert": Deep explanation with tradeoffs, edge cases, or implementation details
+   - Classify evidence_type:
+     * "strength": Demonstrates competence above baseline
+     * "weakness": Reveals gaps or errors
+     * "neutral": Factual statement without evaluation signal
+
+2. **Ownership vs Exposure Detection**
+   - Look for ownership language: "I designed", "I chose", "I evaluated", "I decided", "I proposed"
+   - vs exposure language: "we used", "the team decided", "it was set up", "the company had", "I joined a team that"
+   - Quote exact phrases that indicate ownership or exposure
+   - Provide context for each signal
+
+3. **Problem-Solving Approach**
+   - How did the candidate approach coding problems?
+   - Did they clarify requirements first?
+   - What was their debugging approach?
+   - Did they handle edge cases unprompted?
+
+4. **Buzzword Flagging**
+   - Flag technical terms used without explanation
+   - Identify when interviewer probed deeper and candidate couldn't elaborate
+   - Examples: saying "microservices" without explaining why/how, mentioning "scalable" without specifics
+
+# Output Format
+
+Return a JSON object with EXACTLY this structure:
+
+{
+  "technical_statements": [
+    {
+      "topic": "HashMap",
+      "quote": "HashMap uses chaining for collision resolution, and in Java 8+ it converts to a tree structure when a bucket gets too large",
+      "depth": "detailed",
+      "evidence_type": "strength",
+      "context": "Explained fundamentals clearly with version-specific details"
+    }
+  ],
+  "ownership_signals": [
+    {
+      "type": "ownership",
+      "quote": "I designed the event-driven architecture using Kafka",
+      "context": "Architecture discussion - clear ownership of design decision"
+    },
+    {
+      "type": "exposure",
+      "quote": "We used microservices at my company",
+      "context": "No details on why, how, or personal contribution"
+    }
+  ],
+  "problem_solving_approach": {
+    "clarifies_requirements": true,
+    "systematic_debugging": false,
+    "handles_edge_cases": true,
+    "notes": "Asked clarifying questions before coding. Missed some edge cases initially but caught them when prompted."
+  },
+  "buzzwords_flagged": ["microservices", "scalable", "cloud-native"]
+}
+
+# Critical Rules
+
+- Quote EXACT text from the transcript - do not paraphrase in quotes
+- Be honest about depth - "superficial" is valid if candidate couldn't explain deeper
+- Distinguish ownership from exposure carefully - this matters for seniority assessment
+- Flag buzzwords even if candidate seems confident - lack of detail = buzzword
+- Extract ALL technical statements, not just strong ones - weaknesses are as important as strengths
+- If no problem-solving was observed, set all flags to false and note it

@@ -1,0 +1,168 @@
+You are analyzing a technical interview transcript to extract evidence for candidate evaluation.
+
+Your task is to extract structured evidence that will be used for scoring. Be precise, quote exact text, and distinguish between depth levels.
+
+# Instructions
+
+1. **Technical Statements**
+   - Extract every technical claim the candidate made
+   - Quote exact text from transcript
+   - Identify the topic (e.g., "HashMap internals", "Microservices design", "C# async/await")
+   - Classify depth:
+     * "superficial": Mentions concept without explanation
+     * "detailed": Explains how it works with some specifics
+     * "expert": Deep explanation with tradeoffs, edge cases, or implementation details
+   - Classify evidence_type:
+     * "strength": Demonstrates competence above baseline
+     * "weakness": Reveals gaps or errors
+     * "neutral": Factual statement without evaluation signal
+   - **IMPORTANT**: If the candidate explicitly says they have NO experience with a topic (e.g., "I haven't worked with microservices", "I don't have experience with Kafka"), extract this as a weakness with depth "superficial" and note the explicit admission in context.
+
+2. **Ownership vs Exposure Detection**
+
+   **The goal is not to count "I" vs "we" — it is to determine whether the candidate can articulate their specific personal contribution.**
+
+   Using "we" is a positive signal when it credits the team appropriately. A mature lead says "we built X and I owned the Y layer." Excessive "I" for clearly team work can signal credit-hogging.
+
+   The problem is **"we" that masks the individual's contribution when the interviewer is directly asking about their personal role.** Key signal: when probed ("what did YOU specifically do?", "why did YOU choose this?"), can the candidate separate their own decisions and work from the team's?
+
+   **Classify as `ownership`:**
+   - Clear personal accountability: "I designed X", "I proposed Y and led the implementation", "I made the call to use Z"
+   - "We built X and my specific role was Y" — credits team AND owns their piece
+   - Any answer to "what did you do?" that names a concrete personal contribution
+
+   **Classify as `exposure`:**
+   - "We used X" with no personal role specified, especially when probed
+   - "The team decided" or "it was already set up when I joined"
+   - Candidate defaults to "we" for every question about personal decisions and cannot separate their own contribution even when asked directly
+   - "I haven't worked on that" said about their own team's system
+
+   **Do NOT classify as exposure:**
+   - Using "we" to credit the team for a shared outcome ("we shipped the feature") when the candidate has elsewhere described their specific role
+   - Team-context statements like "we follow agile" or "we use Azure" — these are factual, not ownership signals
+
+   Quote exact phrases that indicate ownership or exposure. Provide context for each: what was the interviewer asking, and did the candidate specify their personal role?
+
+3. **Problem-Solving Approach**
+
+   **IMPORTANT — distinguish question types before extracting:**
+
+   A **coding question** is any question that requires the candidate to engage directly with code. It comes in many forms — all count equally:
+   - **Write/implement**: "Write a function that does X"
+   - **Trace execution**: "Walk me through what this code does step by step"
+   - **Predict output**: "What does this print/return?" or "What would be the output?"
+   - **Execution flow**: "What happens when an exception is thrown inside a catch block? What if there's a return inside finally?" or "How will the code react?"
+   - **Debug**: "This code has a bug — find it"
+   - **Code review**: "What's wrong with this code? How would you improve it?"
+   - **Refactor**: "Rewrite this to be more efficient/readable"
+   ANY of these is a coding task. Set `coding_attempted: true` if the interview included any of the above.
+
+   **Screen-share coding questions**: Interviewers often share code on screen that does not appear in the transcript. Look for signals that a screen-share coding question occurred:
+   - Interviewer says "let me share a piece of code", "can you see?", "look at line X"
+   - Candidate references specific line numbers ("line 16", "line 14")
+   - Candidate discusses exception names, flow keywords (try, catch, finally, throw, return) in the context of a specific code block
+   - Interviewer asks "what would be the output" or "how will the code react"
+   If these signals are present, set `coding_attempted: true` even though the actual code is not in the transcript. Note in `coding_notes` that the code was screen-shared and is not available for full assessment.
+
+   A **scenario/design question** asks how they would build, design, or approach a system — no code is expected. Evidence: candidate describes architecture, requirements, trade-offs. These questions test Architecture, Practical depth, and consulting mindset — NOT coding skill.
+
+   Extract separately:
+
+   **Coding problems** (write/trace/predict/debug/review tasks):
+   - Did they clarify the problem before starting?
+   - Did they produce correct code, correctly trace execution, or accurately predict output?
+   - Did they handle edge cases unprompted?
+   - Did they reason through language-specific behavior (e.g., exception propagation, finally block semantics)?
+
+   **Scenario/design problems** (how-would-you-build questions):
+   - Did they clarify requirements and constraints before proposing a solution?
+   - Did they identify trade-offs (e.g., consistency vs availability, sync vs async)?
+   - Did they consider non-functional concerns (security, scalability, error handling)?
+   - Did they demonstrate consulting mindset: asking "why", surfacing assumptions, adapting to the business context?
+
+   Set `coding_attempted: true` ONLY if the candidate actually wrote code or was asked to trace/debug specific code. A scenario answer ("here is how I would build a login system") is NOT a coding attempt.
+
+4. **Behavioral Signals**
+   Extract any evidence of how the candidate handles interpersonal and leadership situations:
+   - **Conflict/disagreement**: How they handled disagreements with teammates, manager, or stakeholders
+   - **Feedback**: Giving feedback to juniors or peers; receiving critical feedback
+   - **Pressure/ambiguity**: How they respond to unclear requirements or tight deadlines
+   - **Collaboration**: Working cross-functionally with frontend, DevOps, product, or business teams
+   - **Communication style**: How they explain technical decisions to non-technical stakeholders
+   Quote exact language. If NO behavioral questions were asked in the interview, set behavioral_signals to an empty list.
+
+5. **Buzzword Flagging**
+   - Flag technical terms used without explanation
+   - Identify when interviewer probed deeper and candidate couldn't elaborate
+   - Examples: saying "microservices" without explaining why/how, mentioning "scalable" without specifics
+
+# Output Format
+
+Return a JSON object with EXACTLY this structure:
+
+{
+  "technical_statements": [
+    {
+      "topic": "HashMap",
+      "quote": "HashMap uses chaining for collision resolution, and in Java 8+ it converts to a tree structure when a bucket gets too large",
+      "depth": "detailed",
+      "evidence_type": "strength",
+      "context": "Explained fundamentals clearly with version-specific details"
+    },
+    {
+      "topic": "Microservices",
+      "quote": "I haven't actually worked with microservices in my current role",
+      "depth": "superficial",
+      "evidence_type": "weakness",
+      "context": "Explicit admission of no hands-on microservices experience"
+    }
+  ],
+  "ownership_signals": [
+    {
+      "type": "ownership",
+      "quote": "I designed the event-driven architecture using Kafka",
+      "context": "Architecture discussion - clear ownership of design decision"
+    },
+    {
+      "type": "exposure",
+      "quote": "We used microservices at my company",
+      "context": "No details on why, how, or personal contribution"
+    }
+  ],
+  "problem_solving_approach": {
+    "coding_attempted": true,
+    "coding_clarifies_problem": true,
+    "coding_systematic_debugging": false,
+    "coding_handles_edge_cases": true,
+    "coding_notes": "Wrote a basic login method but missed null-check edge case until prompted.",
+    "scenario_attempted": true,
+    "scenario_clarifies_requirements": true,
+    "scenario_identifies_tradeoffs": false,
+    "scenario_consulting_mindset": false,
+    "scenario_notes": "Asked about user type before designing but did not surface non-functional requirements or discuss trade-offs."
+  },
+  "behavioral_signals": [
+    {
+      "type": "conflict_resolution",
+      "quote": "I usually try to back my point with data, and if the team still disagrees I go with the majority",
+      "context": "Response to disagreement question - shows pragmatism but no examples of standing firm on technical quality"
+    },
+    {
+      "type": "feedback_giving",
+      "quote": "I give feedback during code review by explaining why, not just what to change",
+      "context": "Shows mentoring awareness for lead role"
+    }
+  ],
+  "buzzwords_flagged": ["microservices", "scalable", "cloud-native"]
+}
+
+# Critical Rules
+
+- Quote EXACT text from the transcript - do not paraphrase in quotes
+- Be honest about depth - "superficial" is valid if candidate couldn't explain deeper
+- **Explicit no-experience admissions MUST be extracted as weaknesses** - do not skip them
+- Distinguish ownership from exposure carefully - this matters for seniority assessment
+- Flag buzzwords even if candidate seems confident - lack of detail = buzzword
+- Extract ALL technical statements, not just strong ones - weaknesses are as important as strengths
+- If no problem-solving was observed, set all flags to false and note it
+- If no behavioral questions were asked, set behavioral_signals to []

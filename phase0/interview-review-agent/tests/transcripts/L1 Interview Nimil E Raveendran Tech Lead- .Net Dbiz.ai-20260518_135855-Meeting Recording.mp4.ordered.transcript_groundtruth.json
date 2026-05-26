@@ -1,0 +1,88 @@
+{
+  "candidate_name": "Nimil E Raveendran",
+  "role": "dotnet_lead",
+  "interview_date": "2026-05-18",
+  "interviewer": "Naresh Kumar",
+
+  "expected_decision": "Conditional",
+  "expected_calibration": "Solid hands-on backend engineer with practical distributed systems exposure (AKS, Event Hub, saga/compensation patterns). Pattern familiarity is real but architectural reasoning was not independently structured — interviewer had to repeatedly probe failure boundaries, ownership, and 'why'. Not yet at lead-level system clarity. Borderline select with close monitoring.",
+
+  "expected_dimension_ranges": {
+    "Fundamentals":               { "min": 2.0, "max": 3.5 },
+    "Coding":                     { "min": 0.5, "max": 1.0 },
+    "Architecture":               { "min": 2.5, "max": 3.5 },
+    "Ownership":                  { "min": 2.0, "max": 3.5 },
+    "Communication & Behavioral": { "min": 2.5, "max": 3.5 },
+    "Practical":                  { "min": 2.5, "max": 3.5 },
+    "Learning":                   { "min": 2.0, "max": 3.5 }
+  },
+
+  "critical_issues": [
+    {
+      "id": "architecture_required_repeated_probing",
+      "description": "Candidate recognised microservices/saga/compensation patterns but could not independently structure the analysis. Interviewer had to repeatedly ask 'what exactly happens here?', 'why compensation over rollback?', 'which service owns this?' before the candidate reached each logical step.",
+      "quote_patterns": ["saga", "compensation", "transaction"],
+      "topic_patterns": ["Architecture", "Microservices", "Transaction"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "major",
+      "must_catch": true
+    },
+    {
+      "id": "missing_failure_mode_analysis",
+      "description": "No proactive discussion of failure paths, retry strategies, dead-letter queues, idempotency, or consistency guarantees — all expected from a lead candidate discussing distributed transaction flows.",
+      "quote_patterns": [],
+      "topic_patterns": ["failure", "retry", "idempotency", "DLQ", "dead-letter"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "major",
+      "must_catch": false
+    },
+    {
+      "id": "array_list_weak",
+      "description": "Array vs List explanation was unexpectedly shallow for a 12-year profile. Concern is less about syntax and more about inability to structure a foundational explanation clearly.",
+      "quote_patterns": ["array", "list", "Array", "List"],
+      "topic_patterns": ["Arrays", "Collections", "Fundamentals"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Fundamentals",
+      "severity": "minor",
+      "must_catch": false
+    },
+    {
+      "id": "no_observability_or_operational_concerns",
+      "description": "No mention of observability, monitoring, or operational implications during system design discussion — expected at lead level.",
+      "quote_patterns": [],
+      "topic_patterns": ["observability", "monitoring", "logging", "tracing"],
+      "expected_evidence_type": "weakness",
+      "dimension": "Architecture",
+      "severity": "minor",
+      "must_catch": false
+    }
+  ],
+
+  "known_strengths": [
+    {
+      "id": "saga_pattern_familiarity",
+      "description": "Demonstrated practical familiarity with saga/compensation-based transaction patterns in distributed systems.",
+      "quote_patterns": ["saga", "compensation", "transaction based"],
+      "topic_patterns": ["Saga Pattern", "Distributed Transactions", "Microservices"],
+      "expected_evidence_type": "strength",
+      "dimension": "Architecture"
+    },
+    {
+      "id": "microservices_decomposition",
+      "description": "Can decompose a domain into microservices along business boundaries when guided.",
+      "quote_patterns": ["business domain", "split", "microservices"],
+      "topic_patterns": ["Microservices", "Domain Design"],
+      "expected_evidence_type": "strength",
+      "dimension": "Architecture"
+    }
+  ],
+
+  "scoring_notes": {
+    "architecture_model_risk": "Model is likely to over-score Architecture (4.0) because it detects correct vocabulary (saga, compensation, queues) without penalising that reasoning was interviewer-prompted rather than candidate-driven. Architecture should be 2.5-3.5 range: good pattern exposure, not yet lead-level independent reasoning.",
+    "decision_note": "Borderline select — not a flat reject. Candidate has real distributed systems exposure and could grow into the role with mentoring. Score threshold calibration should reflect this nuance."
+  },
+
+  "notes": "30-min interview. No coding tasks were run — Coding 0.5 is expected and correct. Behavioral questions were not asked — Communication & Behavioral cap at 3.5. The key calibration challenge is Architecture: vocabulary recognition ≠ architectural ownership. A lead should proactively surface failure modes, ownership boundaries, and tradeoffs without being guided question by question."
+}
